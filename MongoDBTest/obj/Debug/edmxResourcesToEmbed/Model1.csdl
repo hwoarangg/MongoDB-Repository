@@ -1,0 +1,1763 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ESCMTestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Accounts">
+    <Key>
+      <PropertyRef Name="AccountCode" />
+      <PropertyRef Name="AccountType" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AccountCode" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AccountName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AccountInvoceCode" Type="Int32" Nullable="false" />
+    <Property Name="AccountType" Type="Byte" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RecId" Type="Int64" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="CommissionInvoice" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TransType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CountryCode" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ApprovalMask">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PLNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PLId" Type="Int64" Nullable="false" />
+    <Property Name="PONo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ItemId" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InventColorId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InventStyleId" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DestinationId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="POPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PenaltyPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="DiscountRateCalculated" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PODeliveryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EstimatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="VendorPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ForwarderId" Type="Int64" Nullable="false" />
+    <Property Name="PODeliveryType" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DeliveryTypeCalculated" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DiscountRateEarned" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="DeliveryTypeApproved" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Incoterm" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NetWeight" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="GrossWeight" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="QtyProduct" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="PurchQtyOrdered" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BrandId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TransType" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ApprovalMaskDeleted">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" />
+    <Property Name="PLNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PLId" Type="Int64" Nullable="false" />
+    <Property Name="PONo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ItemId" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InventColorId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InventStyleId" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DestinationId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="POPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PenaltyPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="DiscountRateCalculated" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PODeliveryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EstimatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="VendorPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ForwarderId" Type="Int64" Nullable="false" />
+    <Property Name="PODeliveryType" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DeliveryTypeCalculated" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DiscountRateEarned" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="DeliveryTypeApproved" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Incoterm" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NetWeight" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="GrossWeight" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="QtyProduct" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="PurchQtyOrdered" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BrandId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TransType" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="AssortmentTable">
+    <Key>
+      <PropertyRef Name="AssortmentGROUPId" />
+      <PropertyRef Name="SizeDescription" />
+      <PropertyRef Name="AppId" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AssortmentGROUPId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SizeDescription" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Qty" Type="Int32" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="RecId" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Barcode">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ItemId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BarcodeType" Type="Byte" Nullable="false" />
+    <Property Name="InventSizeId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InventColorId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InventStyleId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InventSeasonId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AssortmenGroup" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ItemBarcode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AssortiInBarcode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Qty" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CountryOfOrigin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RecId" Type="Int64" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BillToRoute">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BillToRouteId" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SequenceNo" Type="Int32" Nullable="false" />
+    <Property Name="InvoiceAccount" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BrandId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="BillToShipToMapping">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SeasonId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="VendorCountry" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LDPType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DestinationCountry" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BillTo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ShipTo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="BookingHeader">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProcessCode" Type="Byte" Nullable="false" />
+    <Property Name="InventSeasonId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AgentId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="VendAccount" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ForwarderId" Type="Int32" Nullable="false" />
+    <Property Name="PortOfLoadingId" Type="Byte" Nullable="false" />
+    <Property Name="PortOfDischargeId" Type="Byte" Nullable="false" />
+    <Property Name="ForwarderOfficeId" Type="Int64" Nullable="false" />
+    <Property Name="NotifyParty" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ShipmentType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PackageType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DestinationServiceType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OriginServiceType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EquipmentType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EquipmentSize" Type="Int32" Nullable="false" />
+    <Property Name="NoOfCartons" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GrossWeight" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Measurement" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="EstimatedDeliveryDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DangerousGoods" Type="Byte" Nullable="false" />
+    <Property Name="VoyNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="reeferTemperatureUnit" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="reeferTemperature" Type="Decimal" Precision="2" Scale="0" />
+    <Property Name="TransType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="paymentType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="dangerousGoodDesc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="equipmentActualSize" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="noofContainer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ConfirmationDate" Type="DateTime" Precision="3" />
+    <Property Name="PoNo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ForwarderRefarenceNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="VendAccountId" Type="Int64" Nullable="false" />
+    <Property Name="CargoDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ForwarderDNDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="BookingLine">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BookingHeaderId" Type="Int64" Nullable="false" />
+    <Property Name="POLineId" Type="Int64" Nullable="false" />
+    <Property Name="QtyinBooking" Type="Int32" Nullable="false" />
+    <Property Name="CargoType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GTIP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BoxQty" Type="Int64" Nullable="false" />
+    <Property Name="Volume" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Kilo" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PurchQtyOrdered" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BoxType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Width" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="Height" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="Length" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="Volume" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="Desi" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="Weight" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="Hanging" Type="Boolean" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="Metrecube" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="BoxTypeId" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsStandartBox" Type="Boolean" />
+    <Property Name="TransType" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BusinessGroup">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="BusinessGroup1" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RecId" Type="Int64" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Colors">
+    <Key>
+      <PropertyRef Name="InventColorId" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InventColorId" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="RecId" Type="Int64" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CompareTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="RefTableId" Type="Int32" Nullable="false" />
+    <Property Name="EscmRefId" Type="Int32" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RecId" Type="Int64" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CountryCode" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CurrencyCode" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="TaxCode" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="TextForSticker" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AppId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="RecId" Type="Int64" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CountryTransport">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CountryCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ShiptoAccountId" Type="Int64" Nullable="false" />
+    <Property Name="ShiptoRouteId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DeliveryMode">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="Design">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DesingCode" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="WithPrice" Type="Boolean" Nullable="false" />
+    <Property Name="LanguageCode" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RecId" Type="Int64" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DesignField">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DesignLabel">
+    <Key>
+      <PropertyRef Name="LabelCode" />
+      <PropertyRef Name="LanguageCode" />
+      <PropertyRef Name="DesingTypeId" />
+      <PropertyRef Name="AppId" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LabelCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LanguageCode" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DesingTypeId" Type="Int64" Nullable="false" />
+    <Property Name="Desciription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DesignType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DivisionGroup">
+    <Key>
+      <PropertyRef Name="DivisionGroup1" />
+      <PropertyRef Name="BusinessGroup" />
+      <PropertyRef Name="AppId" />
+      <PropertyRef Name="Stat" />
+    </Key>
+    <Property Name="DivisionGroup1" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BusinessGroup" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RecId" Type="Int64" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Equipment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EquipmentNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EquipmentStatus" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EquipmentSize" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EquipmentType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SealNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ShipmentType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FreightPayment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OriginServiceType" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DestinationServiceType" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="VGMWeight" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ForwarderId" Type="Int64" Nullable="false" />
+    <Property Name="ExcelImport" Type="Boolean" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PLNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EquipmentInEvent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EquipmentId" Type="Int64" Nullable="false" />
+    <Property Name="EventCode" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EventCodeShortName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EquipmentInPackingList">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EquipmentId" Type="Int64" Nullable="false" />
+    <Property Name="PackingListLineId" Type="Int64" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EquipmentRoute">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EquipmentId" Type="Int64" Nullable="false" />
+    <Property Name="LegNo" Type="Byte" Nullable="false" />
+    <Property Name="ShipmentType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ForwarderId" Type="Int64" Nullable="false" />
+    <Property Name="PortOfLoadingId" Type="Int64" Nullable="false" />
+    <Property Name="PortOfDischargeId" Type="Int64" Nullable="false" />
+    <Property Name="DepartureDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="IMO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Carrier" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ArrivalDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ActualDepartureDate" Type="DateTime" Precision="0" />
+    <Property Name="ActualArrivalDate" Type="DateTime" Precision="0" />
+    <Property Name="TargetForwarderId" Type="Int64" Nullable="false" />
+    <Property Name="Vessel" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Voyage" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FabricComposition">
+    <Key>
+      <PropertyRef Name="FabricCompositionId" />
+      <PropertyRef Name="AppId" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FabricCompositionId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DescriptionEnglish" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DescriptionRussian" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="RecId" Type="Int64" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Forwarder">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int64" Nullable="false" />
+    <Property Name="ForwarderName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ForwarderOffice">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ForwarderId" Type="Int64" Nullable="false" />
+    <Property Name="OfficeName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Insurance">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DeliveryType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PoliceNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InsurerId" Type="Int64" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LCNoList" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LCBankNameList" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FlightNotList" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TransferPointList" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InvoiceTextList" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EquipmentTextList" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="KosimentoTextList" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TotalAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InsuranceDelivery">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InsuranceId" Type="Int64" Nullable="false" />
+    <Property Name="LegNo" Type="Byte" Nullable="false" />
+    <Property Name="TransportVehicle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TransferPoint" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FlightNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InsuranceFiles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InsuranceId" Type="Int64" Nullable="false" />
+    <Property Name="FileName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InsuranceInKonsimento">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InsuranceId" Type="Int64" Nullable="false" />
+    <Property Name="KonsimentoId" Type="Int64" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Insurer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" />
+    <Property Name="InsurerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Fax" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InventDim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InventDimId" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InventSeasonId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InventSizeId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InventColorId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InventStyleId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RecId" Type="Int64" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InventDimCombination">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="ITEMID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CONFIGID" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="INVENTSIZEID" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="INVENTCOLORID" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NAME" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="INVENTDIMID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RBOVARIANTID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="INVENTSTYLEID" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RECID" Type="Int64" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="InventItemGroup">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="ItemGroupId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RecId" Type="Int64" Nullable="false" />
+    <Property Name="Commercialitem" Type="Int32" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InventItemRetailGroup">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GROUPID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NAMEALIAS" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DEPARTMENTID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SIZEGROUPID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="COLORGROUPID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ITEMREPORTNAME" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SHELFREPORTNAME" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DISPENSEPRINTERGROUPID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BARCODESETUPID" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DISPENSEPRINTINGDISABLED" Type="Int32" Nullable="false" />
+    <Property Name="USEEANSTANDARDBARCODE" Type="Int32" Nullable="false" />
+    <Property Name="POSINVENTORYLOOKUP" Type="Int32" Nullable="false" />
+    <Property Name="STYLEGROUPID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FSHREPLENISHMENTRULEID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ITEMGROUPID" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="INVENTLOCATIONIDFORPURCHA16016" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="INVENTLOCATIONIDFORINVENTORY" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="INVENTLOCATIONIDFORSALESORDER" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="INVENTMODELGROUPID" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="INVENTDIMGROUPID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SALESTAXITEMGROUP" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PURCHASETAXITEMGROUP" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BASECOMPARISONUNITCODE" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="KEYINGINPRICE" Type="Int32" Nullable="false" />
+    <Property Name="ETGBUSINESSGROUP" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ETGDIVISIONGROUP" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ETGINVENTUSAGECATEGORYID" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CLSPU" Type="Int32" Nullable="false" />
+    <Property Name="CLSCUSTOMSCATEGORYID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CLSKAPASITEALTGRUP" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Int32" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RecId" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="IsCreateGroupBox" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InvoiceHeader">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InvoiceNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InvoiceDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="VenderInvoiceNo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="VenderInvoiceDate" Type="DateTime" Precision="0" />
+    <Property Name="ExpNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExpDate" Type="DateTime" Precision="0" />
+    <Property Name="ErcNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ErcDate" Type="DateTime" Precision="0" />
+    <Property Name="BlNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BankId" Type="Int64" Nullable="false" />
+    <Property Name="BankName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BankAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BankAccountNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SwiftCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IBAN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Eta" Type="DateTime" Precision="0" />
+    <Property Name="ShipmentDate" Type="DateTime" Precision="0" />
+    <Property Name="VesselName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Voyage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReceiptDate" Type="DateTime" Precision="0" />
+    <Property Name="ReceiptNo" Type="Int32" />
+    <Property Name="ShippingCompanyName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TrackingNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="VendAccount" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InventSeasonId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InvoiceStatus" Type="Byte" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Commissioninvoice" Type="Boolean" Nullable="false" />
+    <Property Name="CommissioninvoiceNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AgentAccountNumber" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AgentComission" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentDate" Type="DateTime" Precision="0" />
+    <Property Name="VesaikIhbarDate" Type="DateTime" Precision="0" />
+    <Property Name="DekontGelisDate" Type="DateTime" Precision="0" />
+    <Property Name="PaymentAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="VesaikType" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="LCRefNo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="VesaikAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PaymentDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BankNamePayment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TotalPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PlListText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PONo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LCNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LCBankName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PaymentListNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="InvoiceLine">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InvoiceHeaderId" Type="Int64" Nullable="false" />
+    <Property Name="PLId" Type="Int64" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Konsimento">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KonsimentoNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OrdinoDate" Type="DateTime" Precision="0" />
+    <Property Name="KonsimentoDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="VendAccountId" Type="Int64" Nullable="false" />
+    <Property Name="ShiptoAccountId" Type="Int64" Nullable="false" />
+    <Property Name="BilltoAccountId" Type="Int64" Nullable="false" />
+    <Property Name="DeliveryType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ForwarderId" Type="Int64" Nullable="false" />
+    <Property Name="OriginCharges" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="OriginChargesMoneyId" Type="Byte" Nullable="false" />
+    <Property Name="FreightCharges" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="FreightChargesMoneyId" Type="Byte" Nullable="false" />
+    <Property Name="DestinationCharges" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="DestinationChargesMoneyId" Type="Byte" Nullable="false" />
+    <Property Name="CustomsCharges" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CustomsChargesMoneyId" Type="Byte" Nullable="false" />
+    <Property Name="DemurrageCharges" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="DemurrageChargesMoneyId" Type="Byte" Nullable="false" />
+    <Property Name="AdhocCharges" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="AdhocChargesMoneyId" Type="Byte" Nullable="false" />
+    <Property Name="StorageCharges" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="StorageChargesMoneyId" Type="Byte" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="FileNo" Type="Int64" />
+  </EntityType>
+  <EntityType Name="KonsimentoInPackingList">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KosimentoId" Type="Int64" Nullable="false" />
+    <Property Name="PackingListId" Type="Int64" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LanguageRefTable">
+    <Key>
+      <PropertyRef Name="EscmRefId" />
+    </Key>
+    <Property Name="TableName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EscmRefId" Type="Int64" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LanguageTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="EscmRefId" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LanguageId" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TableRecId" Type="Int64" Nullable="false" />
+    <Property Name="RecId" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Moduls">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ModulName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="ModulTransactionLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionId" Type="Int64" Nullable="false" />
+    <Property Name="ModulId" Type="Int32" Nullable="false" />
+    <Property Name="ProcessCode" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EventStartDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="EventEndDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PackageBarcode">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PackageBarcodeId" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BoxFamilyId" Type="Int32" Nullable="false" />
+    <Property Name="WorkOrderId" Type="Int32" Nullable="false" />
+    <Property Name="PackageBarcodeStatus" Type="Boolean" />
+    <Property Name="GroupPackageBarcode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="BrandId" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="TransType" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="EntryDate" Type="DateTime" Precision="3" />
+    <Property Name="EntryUserId" Type="Int64" />
+    <Property Name="EntryStatus" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="PackageHeader">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BoxFamilyId" Type="Int64" Nullable="false" />
+    <Property Name="PONo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InvoiceId" Type="Int64" Nullable="false" />
+    <Property Name="BoxTypeId" Type="Int32" Nullable="false" />
+    <Property Name="InGroupPackage" Type="Int32" Nullable="false" />
+    <Property Name="InPackingList" Type="Boolean" Nullable="false" />
+    <Property Name="PLId" Type="Int64" Nullable="false" />
+    <Property Name="NumberOfPackageQty" Type="Int32" Nullable="false" />
+    <Property Name="UnitBoxTotalGrossWeight" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="IsMixPackage" Type="Boolean" />
+    <Property Name="ProcessCode" Type="Int32" Nullable="false" />
+    <Property Name="BrandId" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="PlOrderStart" Type="Int32" />
+    <Property Name="PlOrderEnd" Type="Int32" />
+    <Property Name="ForwarderQty" Type="Int32" />
+    <Property Name="TransType" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PackageLine">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PoLineId" Type="Int64" Nullable="false" />
+    <Property Name="PackageHeaderId" Type="Int64" Nullable="false" />
+    <Property Name="QtyInPackage" Type="Int32" Nullable="false" />
+    <Property Name="AssortmentQty" Type="Int32" Nullable="false" />
+    <Property Name="InventSizeId" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NetWeight" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="AssormentGroupId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="BrandId" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="TransType" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PackingListHeader">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PLNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RefPLId" Type="Int64" />
+    <Property Name="PLStatus" Type="Byte" Nullable="false" />
+    <Property Name="InventSeasonId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="VendAccount" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TotalNetWeight" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="TotalGrossWeight" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="TotalPackageQty" Type="Int32" Nullable="false" />
+    <Property Name="TotalVolume" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="WaitApproveDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsInvoiced" Type="Boolean" Nullable="false" />
+    <Property Name="InvoiceId" Type="Int64" Nullable="false" />
+    <Property Name="ApproveDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ForwarderEntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ForwarderCheckDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ForwarderRevizionDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LogisticApproveDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PlannedDepartureDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="RealizedDepartureDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PlannedArrivalDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="RealizedArrivalDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LclFcl" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InPlanning" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DecisionDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DeliveryNoticeDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FinalToleranceDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PenaltyDebitNote" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="PenaltyNote" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="IsSignedPaperTaken" Type="Boolean" Nullable="false" />
+    <Property Name="DepodEntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SignedPaperDescription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ForwarderCheckDateHistory" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="VendorIncoterm" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="VendorForwarderId" Type="Int64" Nullable="false" />
+    <Property Name="VendorPortOfLoadingId" Type="Int64" />
+    <Property Name="EstHandoverDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DeliveryType" Type="Int32" Nullable="false" />
+    <Property Name="PLSequenceNo" Type="Int32" Nullable="false" />
+    <Property Name="ShipToRoute" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BillToRoute" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DestinationGroupId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentTermId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ShipTo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BillTo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AgentAccountNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AgentComission" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="IsSamplePo" Type="Boolean" />
+    <Property Name="VendorId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceRuleId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LcNo" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DeliveryTypeApproved" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PortOfDischargeId" Type="Int32" Nullable="false" />
+    <Property Name="FinalDestination" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BrandId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CurrencyCode" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsGPL" Type="Boolean" Nullable="false" />
+    <Property Name="Info" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ControlDate" Type="DateTime" Precision="3" />
+    <Property Name="TransType" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="CountryCode" Type="String" MaxLength="3" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="ProductCount" Type="Int32" Nullable="false" />
+    <Property Name="PONo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ItemId" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="LCBankName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InventColorId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="IsCreatedAN" Type="Boolean" Nullable="false" />
+    <Property Name="DirectStatus" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="PackingListLine">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PackingListHeaderId" Type="Int64" Nullable="false" />
+    <Property Name="PackageId" Type="Int64" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BrandId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TransType" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Pattern">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PatternId" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="PatternName" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="BusinessGroup" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="AppId" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="TransType" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="Stat" Type="Boolean" />
+    <Property Name="RecId" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PaymTerm">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PaymTermId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RecId" Type="Int64" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PenaltyByDeliveryDate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Group" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DeliveryMode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MinDay" Type="Int32" Nullable="false" />
+    <Property Name="MaxDay" Type="Int32" Nullable="false" />
+    <Property Name="DiscountRate" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PenaltyByQuantity">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Group" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MinRate" Type="Decimal" Precision="18" Scale="10" Nullable="false" />
+    <Property Name="MaxRate" Type="Decimal" Precision="18" Scale="10" Nullable="false" />
+    <Property Name="DiscountRate" Type="Decimal" Precision="18" Scale="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ports">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PortCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PortName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CountryCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CountryName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BookingDisplay" Type="Boolean" Nullable="false" />
+    <Property Name="TransitDisplay" Type="Boolean" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="IsPortOfDischarge" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Price">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ItemId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InventDimId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Accountrelation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FromDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ToDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Currency" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RecId" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TransType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="InventColorId" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="InventStyleId" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ProcessType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ModulId" Type="Int32" Nullable="false" />
+    <Property Name="Code" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="InventSeasonId" />
+      <PropertyRef Name="ItemId" />
+      <PropertyRef Name="InventColorId" />
+      <PropertyRef Name="InventStyleId" />
+      <PropertyRef Name="BrandId" />
+      <PropertyRef Name="AppId" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InventSeasonId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ItemId" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InventColorId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InventStyleId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ThemeId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FabricCompositionId" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PatternId" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ArticleCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BrandId" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BusinessGroup" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DivisionGroup" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RetailGroup" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="RecId" Type="Int64" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="IsCoated" Type="Int32" Nullable="false" />
+    <Property Name="CLSApproveFabricComposition" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="PurchaseOrderHeader">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PONo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="VendAccount" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InvoiceAccount" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AgentId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AgentComission" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PurchName" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BrandId" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="POStatus" Type="Int32" Nullable="false" />
+    <Property Name="InventSeasonId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ItemId" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CountryOfOrigin" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FSHDivisionGroupId" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RBORetailGroupId" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FSHBusinessGroupId" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CurrencyCode" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CountryOfOriginOth" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Mt" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="Merch" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="IsFreeOfCharge" Type="Int32" Nullable="false" />
+    <Property Name="RecId" Type="Int64" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="POOpen" Type="Int32" Nullable="false" />
+    <Property Name="BillTo" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SubName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SubAccountNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="BillToRouteId" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Technician" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsSamplePo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Closed" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PurchaseOrderLine">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PONo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ThemeId" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ItemId" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InventColorId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InventStyleId" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InventSizeId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InventSeasonId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PurchPoolId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DeliveryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModelNum" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsSizePO" Type="Int32" Nullable="false" />
+    <Property Name="AssortmentGroupId" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PurchQtyOrdered" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="LineNum" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="POStatus" Type="Int32" Nullable="false" />
+    <Property Name="DeliveryMode" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FabricCompositionId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LotQty" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="QtyInAssortment" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MinDeliveryTolDays" Type="Int32" Nullable="false" />
+    <Property Name="DeliveryDateRev" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LabelDesignType" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ClsWeight" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="TransType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ShipTo" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="LCNo" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentTermId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="PurchPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RecId" Type="Int64" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="LCBankName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ShipToRouteId" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="LCBankGroupId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="LCPaymTermName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LCPaymTermId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="InBoundPacking" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="Incoterm" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Closed" Type="Boolean" Nullable="false" />
+    <Property Name="IsManualUpdate" Type="Boolean" Nullable="false" />
+    <Property Name="SendUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="StoreInDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="SalesPool">
+    <Key>
+      <PropertyRef Name="RecId" />
+      <PropertyRef Name="AppId" />
+    </Key>
+    <Property Name="RecId" Type="Int64" Nullable="false" />
+    <Property Name="SalesPoolId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ExportTransit" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Country" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DestinationGroupId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DestinationGroupIdOld" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="DestinationGroupName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Seasons">
+    <Key>
+      <PropertyRef Name="InventSeasonId" />
+      <PropertyRef Name="AppId" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InventSeasonId" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="RecId" Type="Int64" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="StartDate" Type="DateTime" Precision="0" />
+    <Property Name="FinishDate" Type="DateTime" Precision="0" />
+    <Property Name="InUse" Type="Boolean" />
+    <Property Name="SalesSeason" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ShipToRoute">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ShipToRouteId" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SequenceNo" Type="Int32" Nullable="false" />
+    <Property Name="ShipToAccount" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="InventLocation" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ClsQuality" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PortOfDischargeId" Type="Int32" />
+    <Property Name="FinalDestination" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BrandId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Storage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sizes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InventSizeId" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="RecId" Type="Int64" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SizesOrdered">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="SIZE_" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NAME" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RECID" Type="Int64" Nullable="false" />
+    <Property Name="CLS_ROW" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CLS_COLUMN" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CLS_SIZETYPE" Type="Int32" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="OrderNum" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="SizeWeight">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SeasonId" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ItemId" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InventStyle" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InventColor" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InventSizeId" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NetWeight" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="VendAccount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="BrandId" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="SubVendAccountNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SubVendAccount">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VendAccount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SubVendAccount1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RecId" Type="Int64" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Theme">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="ThemeId" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ThemeName" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RecId" Type="Int64" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VenderBank">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int64" Nullable="false" />
+    <Property Name="BankName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BankAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BankAccountNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SwiftCode" Type="String" MaxLength="75" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IBAN" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DefaultBank" Type="Boolean" Nullable="false" />
+    <Property Name="BanksStatus" Type="Boolean" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WogiTransfer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WorkOrderGroupId" Type="Int64" />
+    <Property Name="BeyannameNo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ColorId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Gtip" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ImportFileNo" Type="Int64" />
+    <Property Name="ItemId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="KalemNo" Type="Int64" />
+    <Property Name="PlNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="QualityVersiyonId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SeasonId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="SecondaryItemType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TransferType" Type="Int32" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WorkOrder">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomWorkOrderId" Type="Int64" />
+    <Property Name="WorkOrderGroupId" Type="Int64" />
+    <Property Name="WorkOrderGuid" Type="Guid" Nullable="false" />
+    <Property Name="WorkOrderStatusId" Type="Int32" Nullable="false" />
+    <Property Name="WorkOrderTransferZoneId" Type="Int32" Nullable="false" />
+    <Property Name="WorkOrderTypeId" Type="Int32" />
+    <Property Name="Note" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="InsertTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="ProblemDescription" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="FileNo" Type="Int64" />
+    <Property Name="TransType" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EquipmentNo" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WorkOrderCustomsCompany">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WorkOrderDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WorkOrderDetailGuid" Type="Guid" />
+    <Property Name="WorkOrderId" Type="Int64" Nullable="false" />
+    <Property Name="WorkOrderGroupId" Type="Int64" />
+    <Property Name="InvoiceNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PackingListId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ModelNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="InventStyleId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ArticleCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DestinationId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ColorId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TotalGrossWeight" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="TotalNetWeight" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="BoxQty" Type="Int32" Nullable="false" />
+    <Property Name="ProductQty" Type="Int32" Nullable="false" />
+    <Property Name="WorkOrderInvoiceAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="WorkOrderDetailAffairsId" Type="Int64" />
+    <Property Name="rec_id" Type="Guid" />
+    <Property Name="GTIP" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="AsnLineId" Type="Int64" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EquipmentNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="WorkOrderDetailAffairs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WorkOrderAffairsGuid" Type="Guid" Nullable="false" />
+    <Property Name="WorkOrderId" Type="Int64" />
+    <Property Name="WorkOrderGuid" Type="Guid" Nullable="false" />
+    <Property Name="DescriptionOfGoods" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="PLNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ItemCode" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="InventStyleId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ArticleCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Uom" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="ActualQuantity" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="InvoiceQuantity" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CountryOfOrigian" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="GrossWeight" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="NetWeight" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="IncotermCode" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceNo" Type="String" MaxLength="240" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceDate" Type="DateTime" Precision="0" />
+    <Property Name="InvoiceAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="PackageType" Type="String" MaxLength="240" FixedLength="false" Unicode="true" />
+    <Property Name="NumberOfPackageQty" Type="Int32" />
+    <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProductGroup" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Fabric" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="KonsimentoNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PaymTerm" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CommercialDefinition" Type="String" MaxLength="240" FixedLength="false" Unicode="true" />
+    <Property Name="CommisionInvoiceAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CommisionCurrencyType" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="rec_id" Type="Guid" />
+    <Property Name="ModifiedUserId" Type="Int64" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="GTIP" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="AsnLineId" Type="Int64" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Beneficiary" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="WorkOrderFile">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WorkOrderId" Type="Int64" Nullable="false" />
+    <Property Name="FileName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WorkOrderGroup">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WorkOrderGroupGuid" Type="Guid" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="WogiName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsSend" Type="Boolean" Nullable="false" />
+    <Property Name="WorkOrderTypeId" Type="Int32" Nullable="false" />
+    <Property Name="DeclarationRegistrationNo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="DeclarationRegistrationDate" Type="DateTime" Precision="3" />
+    <Property Name="GDMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ResponseStatus" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsCreatedAN" Type="Boolean" />
+    <Property Name="ANWogiNo" Type="Int64" />
+    <Property Name="CustomsCompanyId" Type="Int32" />
+    <Property Name="TaxPaymentDate" Type="DateTime" Precision="0" />
+    <Property Name="DischargeRecordDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="WorkOrderStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WorkOrderStatusHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WorkOrderId" Type="Int32" Nullable="false" />
+    <Property Name="WorkOrderStatusId" Type="Int32" />
+    <Property Name="InsertTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="WorkOrderStatus" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="WorkOrderSubstatus" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="WorkOrderTransferZone">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WorkOrderType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="WorkOrderTypeTransferZone">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WorkOrderTypeId" Type="Int32" />
+    <Property Name="WorkOrderTransferZoneId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Incoterm">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="IncotermType" />
+      <PropertyRef Name="Stat" />
+      <PropertyRef Name="AppId" />
+      <PropertyRef Name="ModifiedDate" />
+      <PropertyRef Name="ModifiedUserId" />
+      <PropertyRef Name="CreatedDate" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IncotermType" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="Vessel">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="ImoNo" />
+      <PropertyRef Name="VesselName" />
+      <PropertyRef Name="ProduceDate" />
+      <PropertyRef Name="Flag" />
+      <PropertyRef Name="GrossTonnage" />
+      <PropertyRef Name="Classification" />
+      <PropertyRef Name="TransType" />
+      <PropertyRef Name="Stat" />
+      <PropertyRef Name="CreatedDate" />
+      <PropertyRef Name="ModifiedDate" />
+      <PropertyRef Name="ModifiedUserId" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ImoNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="VesselName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProduceDate" Type="Int32" Nullable="false" />
+    <Property Name="Flag" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GrossTonnage" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Classification" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TransType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stat" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedUserId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ESCMTestEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Accounts" EntityType="Self.Accounts" />
+    <EntitySet Name="ApprovalMask" EntityType="Self.ApprovalMask" />
+    <EntitySet Name="ApprovalMaskDeleted" EntityType="Self.ApprovalMaskDeleted" />
+    <EntitySet Name="AssortmentTable" EntityType="Self.AssortmentTable" />
+    <EntitySet Name="Barcode" EntityType="Self.Barcode" />
+    <EntitySet Name="BillToRoute" EntityType="Self.BillToRoute" />
+    <EntitySet Name="BillToShipToMapping" EntityType="Self.BillToShipToMapping" />
+    <EntitySet Name="BookingHeader" EntityType="Self.BookingHeader" />
+    <EntitySet Name="BookingLine" EntityType="Self.BookingLine" />
+    <EntitySet Name="BoxType" EntityType="Self.BoxType" />
+    <EntitySet Name="BusinessGroup" EntityType="Self.BusinessGroup" />
+    <EntitySet Name="Colors" EntityType="Self.Colors" />
+    <EntitySet Name="CompareTable" EntityType="Self.CompareTable" />
+    <EntitySet Name="Country" EntityType="Self.Country" />
+    <EntitySet Name="CountryTransport" EntityType="Self.CountryTransport" />
+    <EntitySet Name="DeliveryMode" EntityType="Self.DeliveryMode" />
+    <EntitySet Name="Design" EntityType="Self.Design" />
+    <EntitySet Name="DesignField" EntityType="Self.DesignField" />
+    <EntitySet Name="DesignLabel" EntityType="Self.DesignLabel" />
+    <EntitySet Name="DesignType" EntityType="Self.DesignType" />
+    <EntitySet Name="DivisionGroup" EntityType="Self.DivisionGroup" />
+    <EntitySet Name="Equipment" EntityType="Self.Equipment" />
+    <EntitySet Name="EquipmentInEvent" EntityType="Self.EquipmentInEvent" />
+    <EntitySet Name="EquipmentInPackingList" EntityType="Self.EquipmentInPackingList" />
+    <EntitySet Name="EquipmentRoute" EntityType="Self.EquipmentRoute" />
+    <EntitySet Name="FabricComposition" EntityType="Self.FabricComposition" />
+    <EntitySet Name="Forwarder" EntityType="Self.Forwarder" />
+    <EntitySet Name="ForwarderOffice" EntityType="Self.ForwarderOffice" />
+    <EntitySet Name="Insurance" EntityType="Self.Insurance" />
+    <EntitySet Name="InsuranceDelivery" EntityType="Self.InsuranceDelivery" />
+    <EntitySet Name="InsuranceFiles" EntityType="Self.InsuranceFiles" />
+    <EntitySet Name="InsuranceInKonsimento" EntityType="Self.InsuranceInKonsimento" />
+    <EntitySet Name="Insurer" EntityType="Self.Insurer" />
+    <EntitySet Name="InventDim" EntityType="Self.InventDim" />
+    <EntitySet Name="InventDimCombination" EntityType="Self.InventDimCombination" />
+    <EntitySet Name="InventItemGroup" EntityType="Self.InventItemGroup" />
+    <EntitySet Name="InventItemRetailGroup" EntityType="Self.InventItemRetailGroup" />
+    <EntitySet Name="InvoiceHeader" EntityType="Self.InvoiceHeader" />
+    <EntitySet Name="InvoiceLine" EntityType="Self.InvoiceLine" />
+    <EntitySet Name="Konsimento" EntityType="Self.Konsimento" />
+    <EntitySet Name="KonsimentoInPackingList" EntityType="Self.KonsimentoInPackingList" />
+    <EntitySet Name="LanguageRefTable" EntityType="Self.LanguageRefTable" />
+    <EntitySet Name="LanguageTable" EntityType="Self.LanguageTable" />
+    <EntitySet Name="Moduls" EntityType="Self.Moduls" />
+    <EntitySet Name="ModulTransactionLog" EntityType="Self.ModulTransactionLog" />
+    <EntitySet Name="PackageBarcode" EntityType="Self.PackageBarcode" />
+    <EntitySet Name="PackageHeader" EntityType="Self.PackageHeader" />
+    <EntitySet Name="PackageLine" EntityType="Self.PackageLine" />
+    <EntitySet Name="PackingListHeader" EntityType="Self.PackingListHeader" />
+    <EntitySet Name="PackingListLine" EntityType="Self.PackingListLine" />
+    <EntitySet Name="Pattern" EntityType="Self.Pattern" />
+    <EntitySet Name="PaymTerm" EntityType="Self.PaymTerm" />
+    <EntitySet Name="PenaltyByDeliveryDate" EntityType="Self.PenaltyByDeliveryDate" />
+    <EntitySet Name="PenaltyByQuantity" EntityType="Self.PenaltyByQuantity" />
+    <EntitySet Name="Ports" EntityType="Self.Ports" />
+    <EntitySet Name="Price" EntityType="Self.Price" />
+    <EntitySet Name="ProcessType" EntityType="Self.ProcessType" />
+    <EntitySet Name="Products" EntityType="Self.Products" />
+    <EntitySet Name="PurchaseOrderHeader" EntityType="Self.PurchaseOrderHeader" />
+    <EntitySet Name="PurchaseOrderLine" EntityType="Self.PurchaseOrderLine" />
+    <EntitySet Name="SalesPool" EntityType="Self.SalesPool" />
+    <EntitySet Name="Seasons" EntityType="Self.Seasons" />
+    <EntitySet Name="ShipToRoute" EntityType="Self.ShipToRoute" />
+    <EntitySet Name="Sizes" EntityType="Self.Sizes" />
+    <EntitySet Name="SizesOrdered" EntityType="Self.SizesOrdered" />
+    <EntitySet Name="SizeWeight" EntityType="Self.SizeWeight" />
+    <EntitySet Name="SubVendAccount" EntityType="Self.SubVendAccount" />
+    <EntitySet Name="Theme" EntityType="Self.Theme" />
+    <EntitySet Name="VenderBank" EntityType="Self.VenderBank" />
+    <EntitySet Name="WogiTransfer" EntityType="Self.WogiTransfer" />
+    <EntitySet Name="WorkOrder" EntityType="Self.WorkOrder" />
+    <EntitySet Name="WorkOrderCustomsCompany" EntityType="Self.WorkOrderCustomsCompany" />
+    <EntitySet Name="WorkOrderDetail" EntityType="Self.WorkOrderDetail" />
+    <EntitySet Name="WorkOrderDetailAffairs" EntityType="Self.WorkOrderDetailAffairs" />
+    <EntitySet Name="WorkOrderFile" EntityType="Self.WorkOrderFile" />
+    <EntitySet Name="WorkOrderGroup" EntityType="Self.WorkOrderGroup" />
+    <EntitySet Name="WorkOrderStatus" EntityType="Self.WorkOrderStatus" />
+    <EntitySet Name="WorkOrderStatusHistory" EntityType="Self.WorkOrderStatusHistory" />
+    <EntitySet Name="WorkOrderTransferZone" EntityType="Self.WorkOrderTransferZone" />
+    <EntitySet Name="WorkOrderType" EntityType="Self.WorkOrderType" />
+    <EntitySet Name="WorkOrderTypeTransferZone" EntityType="Self.WorkOrderTypeTransferZone" />
+    <EntitySet Name="Incoterm" EntityType="Self.Incoterm" />
+    <EntitySet Name="Vessel" EntityType="Self.Vessel" />
+  </EntityContainer>
+</Schema>

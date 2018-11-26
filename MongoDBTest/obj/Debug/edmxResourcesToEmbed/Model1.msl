@@ -1,0 +1,1729 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ESCMTestModelStoreContainer" CdmEntityContainer="ESCMTestEntities">
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="ESCMTestModel.Accounts">
+        <MappingFragment StoreEntitySet="Accounts">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="AccountInvoceCode" ColumnName="AccountInvoceCode" />
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="RecId" ColumnName="RecId" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="CommissionInvoice" ColumnName="CommissionInvoice" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ApprovalMask">
+      <EntityTypeMapping TypeName="ESCMTestModel.ApprovalMask">
+        <MappingFragment StoreEntitySet="ApprovalMask">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PLNo" ColumnName="PLNo" />
+          <ScalarProperty Name="PLId" ColumnName="PLId" />
+          <ScalarProperty Name="PONo" ColumnName="PONo" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="InventColorId" ColumnName="InventColorId" />
+          <ScalarProperty Name="InventStyleId" ColumnName="InventStyleId" />
+          <ScalarProperty Name="DestinationId" ColumnName="DestinationId" />
+          <ScalarProperty Name="POPrice" ColumnName="POPrice" />
+          <ScalarProperty Name="PenaltyPrice" ColumnName="PenaltyPrice" />
+          <ScalarProperty Name="DiscountRateCalculated" ColumnName="DiscountRateCalculated" />
+          <ScalarProperty Name="PODeliveryDate" ColumnName="PODeliveryDate" />
+          <ScalarProperty Name="EstimatedDate" ColumnName="EstimatedDate" />
+          <ScalarProperty Name="VendorPrice" ColumnName="VendorPrice" />
+          <ScalarProperty Name="ForwarderId" ColumnName="ForwarderId" />
+          <ScalarProperty Name="PODeliveryType" ColumnName="PODeliveryType" />
+          <ScalarProperty Name="DeliveryTypeCalculated" ColumnName="DeliveryTypeCalculated" />
+          <ScalarProperty Name="DiscountRateEarned" ColumnName="DiscountRateEarned" />
+          <ScalarProperty Name="DeliveryTypeApproved" ColumnName="DeliveryTypeApproved" />
+          <ScalarProperty Name="Incoterm" ColumnName="Incoterm" />
+          <ScalarProperty Name="NetWeight" ColumnName="NetWeight" />
+          <ScalarProperty Name="GrossWeight" ColumnName="GrossWeight" />
+          <ScalarProperty Name="QtyProduct" ColumnName="QtyProduct" />
+          <ScalarProperty Name="PurchQtyOrdered" ColumnName="PurchQtyOrdered" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ApprovalMaskDeleted">
+      <EntityTypeMapping TypeName="ESCMTestModel.ApprovalMaskDeleted">
+        <MappingFragment StoreEntitySet="ApprovalMaskDeleted">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PLNo" ColumnName="PLNo" />
+          <ScalarProperty Name="PLId" ColumnName="PLId" />
+          <ScalarProperty Name="PONo" ColumnName="PONo" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="InventColorId" ColumnName="InventColorId" />
+          <ScalarProperty Name="InventStyleId" ColumnName="InventStyleId" />
+          <ScalarProperty Name="DestinationId" ColumnName="DestinationId" />
+          <ScalarProperty Name="POPrice" ColumnName="POPrice" />
+          <ScalarProperty Name="PenaltyPrice" ColumnName="PenaltyPrice" />
+          <ScalarProperty Name="DiscountRateCalculated" ColumnName="DiscountRateCalculated" />
+          <ScalarProperty Name="PODeliveryDate" ColumnName="PODeliveryDate" />
+          <ScalarProperty Name="EstimatedDate" ColumnName="EstimatedDate" />
+          <ScalarProperty Name="VendorPrice" ColumnName="VendorPrice" />
+          <ScalarProperty Name="ForwarderId" ColumnName="ForwarderId" />
+          <ScalarProperty Name="PODeliveryType" ColumnName="PODeliveryType" />
+          <ScalarProperty Name="DeliveryTypeCalculated" ColumnName="DeliveryTypeCalculated" />
+          <ScalarProperty Name="DiscountRateEarned" ColumnName="DiscountRateEarned" />
+          <ScalarProperty Name="DeliveryTypeApproved" ColumnName="DeliveryTypeApproved" />
+          <ScalarProperty Name="Incoterm" ColumnName="Incoterm" />
+          <ScalarProperty Name="NetWeight" ColumnName="NetWeight" />
+          <ScalarProperty Name="GrossWeight" ColumnName="GrossWeight" />
+          <ScalarProperty Name="QtyProduct" ColumnName="QtyProduct" />
+          <ScalarProperty Name="PurchQtyOrdered" ColumnName="PurchQtyOrdered" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AssortmentTable">
+      <EntityTypeMapping TypeName="ESCMTestModel.AssortmentTable">
+        <MappingFragment StoreEntitySet="AssortmentTable">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AssortmentGROUPId" ColumnName="AssortmentGROUPId" />
+          <ScalarProperty Name="SizeDescription" ColumnName="SizeDescription" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="RecId" ColumnName="RecId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Barcode">
+      <EntityTypeMapping TypeName="ESCMTestModel.Barcode">
+        <MappingFragment StoreEntitySet="Barcode">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="BarcodeType" ColumnName="BarcodeType" />
+          <ScalarProperty Name="InventSizeId" ColumnName="InventSizeId" />
+          <ScalarProperty Name="InventColorId" ColumnName="InventColorId" />
+          <ScalarProperty Name="InventStyleId" ColumnName="InventStyleId" />
+          <ScalarProperty Name="InventSeasonId" ColumnName="InventSeasonId" />
+          <ScalarProperty Name="AssortmenGroup" ColumnName="AssortmenGroup" />
+          <ScalarProperty Name="ItemBarcode" ColumnName="ItemBarcode" />
+          <ScalarProperty Name="AssortiInBarcode" ColumnName="AssortiInBarcode" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CountryOfOrigin" ColumnName="CountryOfOrigin" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="RecId" ColumnName="RecId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BillToRoute">
+      <EntityTypeMapping TypeName="ESCMTestModel.BillToRoute">
+        <MappingFragment StoreEntitySet="BillToRoute">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BillToRouteId" ColumnName="BillToRouteId" />
+          <ScalarProperty Name="SequenceNo" ColumnName="SequenceNo" />
+          <ScalarProperty Name="InvoiceAccount" ColumnName="InvoiceAccount" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BillToShipToMapping">
+      <EntityTypeMapping TypeName="ESCMTestModel.BillToShipToMapping">
+        <MappingFragment StoreEntitySet="BillToShipToMapping">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SeasonId" ColumnName="SeasonId" />
+          <ScalarProperty Name="VendorCountry" ColumnName="VendorCountry" />
+          <ScalarProperty Name="LDPType" ColumnName="LDPType" />
+          <ScalarProperty Name="DestinationCountry" ColumnName="DestinationCountry" />
+          <ScalarProperty Name="BillTo" ColumnName="BillTo" />
+          <ScalarProperty Name="ShipTo" ColumnName="ShipTo" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BookingHeader">
+      <EntityTypeMapping TypeName="ESCMTestModel.BookingHeader">
+        <MappingFragment StoreEntitySet="BookingHeader">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ProcessCode" ColumnName="ProcessCode" />
+          <ScalarProperty Name="InventSeasonId" ColumnName="InventSeasonId" />
+          <ScalarProperty Name="AgentId" ColumnName="AgentId" />
+          <ScalarProperty Name="VendAccount" ColumnName="VendAccount" />
+          <ScalarProperty Name="ForwarderId" ColumnName="ForwarderId" />
+          <ScalarProperty Name="PortOfLoadingId" ColumnName="PortOfLoadingId" />
+          <ScalarProperty Name="PortOfDischargeId" ColumnName="PortOfDischargeId" />
+          <ScalarProperty Name="ForwarderOfficeId" ColumnName="ForwarderOfficeId" />
+          <ScalarProperty Name="NotifyParty" ColumnName="NotifyParty" />
+          <ScalarProperty Name="ShipmentType" ColumnName="ShipmentType" />
+          <ScalarProperty Name="PackageType" ColumnName="PackageType" />
+          <ScalarProperty Name="DestinationServiceType" ColumnName="DestinationServiceType" />
+          <ScalarProperty Name="OriginServiceType" ColumnName="OriginServiceType" />
+          <ScalarProperty Name="EquipmentType" ColumnName="EquipmentType" />
+          <ScalarProperty Name="EquipmentSize" ColumnName="EquipmentSize" />
+          <ScalarProperty Name="NoOfCartons" ColumnName="NoOfCartons" />
+          <ScalarProperty Name="GrossWeight" ColumnName="GrossWeight" />
+          <ScalarProperty Name="Measurement" ColumnName="Measurement" />
+          <ScalarProperty Name="EstimatedDeliveryDate" ColumnName="EstimatedDeliveryDate" />
+          <ScalarProperty Name="DangerousGoods" ColumnName="DangerousGoods" />
+          <ScalarProperty Name="VoyNo" ColumnName="VoyNo" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="reeferTemperatureUnit" ColumnName="reeferTemperatureUnit" />
+          <ScalarProperty Name="reeferTemperature" ColumnName="reeferTemperature" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="paymentType" ColumnName="paymentType" />
+          <ScalarProperty Name="dangerousGoodDesc" ColumnName="dangerousGoodDesc" />
+          <ScalarProperty Name="equipmentActualSize" ColumnName="equipmentActualSize" />
+          <ScalarProperty Name="noofContainer" ColumnName="noofContainer" />
+          <ScalarProperty Name="ConfirmationDate" ColumnName="ConfirmationDate" />
+          <ScalarProperty Name="PoNo" ColumnName="PoNo" />
+          <ScalarProperty Name="ForwarderRefarenceNo" ColumnName="ForwarderRefarenceNo" />
+          <ScalarProperty Name="VendAccountId" ColumnName="VendAccountId" />
+          <ScalarProperty Name="CargoDescription" ColumnName="CargoDescription" />
+          <ScalarProperty Name="ForwarderDNDate" ColumnName="ForwarderDNDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BookingLine">
+      <EntityTypeMapping TypeName="ESCMTestModel.BookingLine">
+        <MappingFragment StoreEntitySet="BookingLine">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BookingHeaderId" ColumnName="BookingHeaderId" />
+          <ScalarProperty Name="POLineId" ColumnName="POLineId" />
+          <ScalarProperty Name="QtyinBooking" ColumnName="QtyinBooking" />
+          <ScalarProperty Name="CargoType" ColumnName="CargoType" />
+          <ScalarProperty Name="GTIP" ColumnName="GTIP" />
+          <ScalarProperty Name="BoxQty" ColumnName="BoxQty" />
+          <ScalarProperty Name="Volume" ColumnName="Volume" />
+          <ScalarProperty Name="Kilo" ColumnName="Kilo" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="PurchQtyOrdered" ColumnName="PurchQtyOrdered" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BoxType">
+      <EntityTypeMapping TypeName="ESCMTestModel.BoxType">
+        <MappingFragment StoreEntitySet="BoxType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Volume" ColumnName="Volume" />
+          <ScalarProperty Name="Desi" ColumnName="Desi" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Hanging" ColumnName="Hanging" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="Metrecube" ColumnName="Metrecube" />
+          <ScalarProperty Name="BoxTypeId" ColumnName="BoxTypeId" />
+          <ScalarProperty Name="IsStandartBox" ColumnName="IsStandartBox" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BusinessGroup">
+      <EntityTypeMapping TypeName="ESCMTestModel.BusinessGroup">
+        <MappingFragment StoreEntitySet="BusinessGroup">
+          <ScalarProperty Name="BusinessGroup1" ColumnName="BusinessGroup" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="RecId" ColumnName="RecId" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Colors">
+      <EntityTypeMapping TypeName="ESCMTestModel.Colors">
+        <MappingFragment StoreEntitySet="Colors">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="InventColorId" ColumnName="InventColorId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="RecId" ColumnName="RecId" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CompareTable">
+      <EntityTypeMapping TypeName="ESCMTestModel.CompareTable">
+        <MappingFragment StoreEntitySet="CompareTable">
+          <ScalarProperty Name="RefTableId" ColumnName="RefTableId" />
+          <ScalarProperty Name="EscmRefId" ColumnName="EscmRefId" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="RecId" ColumnName="RecId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Country">
+      <EntityTypeMapping TypeName="ESCMTestModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="TaxCode" ColumnName="TaxCode" />
+          <ScalarProperty Name="TextForSticker" ColumnName="TextForSticker" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="RecId" ColumnName="RecId" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CountryTransport">
+      <EntityTypeMapping TypeName="ESCMTestModel.CountryTransport">
+        <MappingFragment StoreEntitySet="CountryTransport">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="ShiptoAccountId" ColumnName="ShiptoAccountId" />
+          <ScalarProperty Name="ShiptoRouteId" ColumnName="ShiptoRouteId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeliveryMode">
+      <EntityTypeMapping TypeName="ESCMTestModel.DeliveryMode">
+        <MappingFragment StoreEntitySet="DeliveryMode">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Design">
+      <EntityTypeMapping TypeName="ESCMTestModel.Design">
+        <MappingFragment StoreEntitySet="Design">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DesingCode" ColumnName="DesingCode" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="WithPrice" ColumnName="WithPrice" />
+          <ScalarProperty Name="LanguageCode" ColumnName="LanguageCode" />
+          <ScalarProperty Name="RecId" ColumnName="RecId" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DesignField">
+      <EntityTypeMapping TypeName="ESCMTestModel.DesignField">
+        <MappingFragment StoreEntitySet="DesignField">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DesignLabel">
+      <EntityTypeMapping TypeName="ESCMTestModel.DesignLabel">
+        <MappingFragment StoreEntitySet="DesignLabel">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="LabelCode" ColumnName="LabelCode" />
+          <ScalarProperty Name="LanguageCode" ColumnName="LanguageCode" />
+          <ScalarProperty Name="DesingTypeId" ColumnName="DesingTypeId" />
+          <ScalarProperty Name="Desciription" ColumnName="Desciription" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DesignType">
+      <EntityTypeMapping TypeName="ESCMTestModel.DesignType">
+        <MappingFragment StoreEntitySet="DesignType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DivisionGroup">
+      <EntityTypeMapping TypeName="ESCMTestModel.DivisionGroup">
+        <MappingFragment StoreEntitySet="DivisionGroup">
+          <ScalarProperty Name="DivisionGroup1" ColumnName="DivisionGroup" />
+          <ScalarProperty Name="BusinessGroup" ColumnName="BusinessGroup" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="RecId" ColumnName="RecId" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Equipment">
+      <EntityTypeMapping TypeName="ESCMTestModel.Equipment">
+        <MappingFragment StoreEntitySet="Equipment">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EquipmentNo" ColumnName="EquipmentNo" />
+          <ScalarProperty Name="EquipmentStatus" ColumnName="EquipmentStatus" />
+          <ScalarProperty Name="EquipmentSize" ColumnName="EquipmentSize" />
+          <ScalarProperty Name="EquipmentType" ColumnName="EquipmentType" />
+          <ScalarProperty Name="SealNo" ColumnName="SealNo" />
+          <ScalarProperty Name="ShipmentType" ColumnName="ShipmentType" />
+          <ScalarProperty Name="FreightPayment" ColumnName="FreightPayment" />
+          <ScalarProperty Name="OriginServiceType" ColumnName="OriginServiceType" />
+          <ScalarProperty Name="DestinationServiceType" ColumnName="DestinationServiceType" />
+          <ScalarProperty Name="VGMWeight" ColumnName="VGMWeight" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="ForwarderId" ColumnName="ForwarderId" />
+          <ScalarProperty Name="ExcelImport" ColumnName="ExcelImport" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="PLNo" ColumnName="PLNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EquipmentInEvent">
+      <EntityTypeMapping TypeName="ESCMTestModel.EquipmentInEvent">
+        <MappingFragment StoreEntitySet="EquipmentInEvent">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EquipmentId" ColumnName="EquipmentId" />
+          <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+          <ScalarProperty Name="EventCodeShortName" ColumnName="EventCodeShortName" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EquipmentInPackingList">
+      <EntityTypeMapping TypeName="ESCMTestModel.EquipmentInPackingList">
+        <MappingFragment StoreEntitySet="EquipmentInPackingList">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EquipmentId" ColumnName="EquipmentId" />
+          <ScalarProperty Name="PackingListLineId" ColumnName="PackingListLineId" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EquipmentRoute">
+      <EntityTypeMapping TypeName="ESCMTestModel.EquipmentRoute">
+        <MappingFragment StoreEntitySet="EquipmentRoute">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EquipmentId" ColumnName="EquipmentId" />
+          <ScalarProperty Name="LegNo" ColumnName="LegNo" />
+          <ScalarProperty Name="ShipmentType" ColumnName="ShipmentType" />
+          <ScalarProperty Name="ForwarderId" ColumnName="ForwarderId" />
+          <ScalarProperty Name="PortOfLoadingId" ColumnName="PortOfLoadingId" />
+          <ScalarProperty Name="PortOfDischargeId" ColumnName="PortOfDischargeId" />
+          <ScalarProperty Name="DepartureDate" ColumnName="DepartureDate" />
+          <ScalarProperty Name="IMO" ColumnName="IMO" />
+          <ScalarProperty Name="Carrier" ColumnName="Carrier" />
+          <ScalarProperty Name="ArrivalDate" ColumnName="ArrivalDate" />
+          <ScalarProperty Name="ActualDepartureDate" ColumnName="ActualDepartureDate" />
+          <ScalarProperty Name="ActualArrivalDate" ColumnName="ActualArrivalDate" />
+          <ScalarProperty Name="TargetForwarderId" ColumnName="TargetForwarderId" />
+          <ScalarProperty Name="Vessel" ColumnName="Vessel" />
+          <ScalarProperty Name="Voyage" ColumnName="Voyage" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FabricComposition">
+      <EntityTypeMapping TypeName="ESCMTestModel.FabricComposition">
+        <MappingFragment StoreEntitySet="FabricComposition">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FabricCompositionId" ColumnName="FabricCompositionId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DescriptionEnglish" ColumnName="DescriptionEnglish" />
+          <ScalarProperty Name="DescriptionRussian" ColumnName="DescriptionRussian" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="RecId" ColumnName="RecId" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Forwarder">
+      <EntityTypeMapping TypeName="ESCMTestModel.Forwarder">
+        <MappingFragment StoreEntitySet="Forwarder">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ForwarderName" ColumnName="ForwarderName" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ForwarderOffice">
+      <EntityTypeMapping TypeName="ESCMTestModel.ForwarderOffice">
+        <MappingFragment StoreEntitySet="ForwarderOffice">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ForwarderId" ColumnName="ForwarderId" />
+          <ScalarProperty Name="OfficeName" ColumnName="OfficeName" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Insurance">
+      <EntityTypeMapping TypeName="ESCMTestModel.Insurance">
+        <MappingFragment StoreEntitySet="Insurance">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DeliveryType" ColumnName="DeliveryType" />
+          <ScalarProperty Name="PoliceNo" ColumnName="PoliceNo" />
+          <ScalarProperty Name="InsurerId" ColumnName="InsurerId" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="LCNoList" ColumnName="LCNoList" />
+          <ScalarProperty Name="LCBankNameList" ColumnName="LCBankNameList" />
+          <ScalarProperty Name="FlightNotList" ColumnName="FlightNotList" />
+          <ScalarProperty Name="TransferPointList" ColumnName="TransferPointList" />
+          <ScalarProperty Name="InvoiceTextList" ColumnName="InvoiceTextList" />
+          <ScalarProperty Name="EquipmentTextList" ColumnName="EquipmentTextList" />
+          <ScalarProperty Name="KosimentoTextList" ColumnName="KosimentoTextList" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InsuranceDelivery">
+      <EntityTypeMapping TypeName="ESCMTestModel.InsuranceDelivery">
+        <MappingFragment StoreEntitySet="InsuranceDelivery">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="InsuranceId" ColumnName="InsuranceId" />
+          <ScalarProperty Name="LegNo" ColumnName="LegNo" />
+          <ScalarProperty Name="TransportVehicle" ColumnName="TransportVehicle" />
+          <ScalarProperty Name="TransferPoint" ColumnName="TransferPoint" />
+          <ScalarProperty Name="FlightNo" ColumnName="FlightNo" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InsuranceFiles">
+      <EntityTypeMapping TypeName="ESCMTestModel.InsuranceFiles">
+        <MappingFragment StoreEntitySet="InsuranceFiles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="InsuranceId" ColumnName="InsuranceId" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InsuranceInKonsimento">
+      <EntityTypeMapping TypeName="ESCMTestModel.InsuranceInKonsimento">
+        <MappingFragment StoreEntitySet="InsuranceInKonsimento">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="InsuranceId" ColumnName="InsuranceId" />
+          <ScalarProperty Name="KonsimentoId" ColumnName="KonsimentoId" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Insurer">
+      <EntityTypeMapping TypeName="ESCMTestModel.Insurer">
+        <MappingFragment StoreEntitySet="Insurer">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="InsurerName" ColumnName="InsurerName" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InventDim">
+      <EntityTypeMapping TypeName="ESCMTestModel.InventDim">
+        <MappingFragment StoreEntitySet="InventDim">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="InventDimId" ColumnName="InventDimId" />
+          <ScalarProperty Name="InventSeasonId" ColumnName="InventSeasonId" />
+          <ScalarProperty Name="InventSizeId" ColumnName="InventSizeId" />
+          <ScalarProperty Name="InventColorId" ColumnName="InventColorId" />
+          <ScalarProperty Name="InventStyleId" ColumnName="InventStyleId" />
+          <ScalarProperty Name="RecId" ColumnName="RecId" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InventDimCombination">
+      <EntityTypeMapping TypeName="ESCMTestModel.InventDimCombination">
+        <MappingFragment StoreEntitySet="InventDimCombination">
+          <ScalarProperty Name="ITEMID" ColumnName="ITEMID" />
+          <ScalarProperty Name="CONFIGID" ColumnName="CONFIGID" />
+          <ScalarProperty Name="INVENTSIZEID" ColumnName="INVENTSIZEID" />
+          <ScalarProperty Name="INVENTCOLORID" ColumnName="INVENTCOLORID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="INVENTDIMID" ColumnName="INVENTDIMID" />
+          <ScalarProperty Name="RBOVARIANTID" ColumnName="RBOVARIANTID" />
+          <ScalarProperty Name="INVENTSTYLEID" ColumnName="INVENTSTYLEID" />
+          <ScalarProperty Name="RECID" ColumnName="RECID" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InventItemGroup">
+      <EntityTypeMapping TypeName="ESCMTestModel.InventItemGroup">
+        <MappingFragment StoreEntitySet="InventItemGroup">
+          <ScalarProperty Name="ItemGroupId" ColumnName="ItemGroupId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="RecId" ColumnName="RecId" />
+          <ScalarProperty Name="Commercialitem" ColumnName="Commercialitem" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InventItemRetailGroup">
+      <EntityTypeMapping TypeName="ESCMTestModel.InventItemRetailGroup">
+        <MappingFragment StoreEntitySet="InventItemRetailGroup">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="GROUPID" ColumnName="GROUPID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="NAMEALIAS" ColumnName="NAMEALIAS" />
+          <ScalarProperty Name="DEPARTMENTID" ColumnName="DEPARTMENTID" />
+          <ScalarProperty Name="SIZEGROUPID" ColumnName="SIZEGROUPID" />
+          <ScalarProperty Name="COLORGROUPID" ColumnName="COLORGROUPID" />
+          <ScalarProperty Name="ITEMREPORTNAME" ColumnName="ITEMREPORTNAME" />
+          <ScalarProperty Name="SHELFREPORTNAME" ColumnName="SHELFREPORTNAME" />
+          <ScalarProperty Name="DISPENSEPRINTERGROUPID" ColumnName="DISPENSEPRINTERGROUPID" />
+          <ScalarProperty Name="BARCODESETUPID" ColumnName="BARCODESETUPID" />
+          <ScalarProperty Name="DISPENSEPRINTINGDISABLED" ColumnName="DISPENSEPRINTINGDISABLED" />
+          <ScalarProperty Name="USEEANSTANDARDBARCODE" ColumnName="USEEANSTANDARDBARCODE" />
+          <ScalarProperty Name="POSINVENTORYLOOKUP" ColumnName="POSINVENTORYLOOKUP" />
+          <ScalarProperty Name="STYLEGROUPID" ColumnName="STYLEGROUPID" />
+          <ScalarProperty Name="FSHREPLENISHMENTRULEID" ColumnName="FSHREPLENISHMENTRULEID" />
+          <ScalarProperty Name="ITEMGROUPID" ColumnName="ITEMGROUPID" />
+          <ScalarProperty Name="INVENTLOCATIONIDFORPURCHA16016" ColumnName="INVENTLOCATIONIDFORPURCHA16016" />
+          <ScalarProperty Name="INVENTLOCATIONIDFORINVENTORY" ColumnName="INVENTLOCATIONIDFORINVENTORY" />
+          <ScalarProperty Name="INVENTLOCATIONIDFORSALESORDER" ColumnName="INVENTLOCATIONIDFORSALESORDER" />
+          <ScalarProperty Name="INVENTMODELGROUPID" ColumnName="INVENTMODELGROUPID" />
+          <ScalarProperty Name="INVENTDIMGROUPID" ColumnName="INVENTDIMGROUPID" />
+          <ScalarProperty Name="SALESTAXITEMGROUP" ColumnName="SALESTAXITEMGROUP" />
+          <ScalarProperty Name="PURCHASETAXITEMGROUP" ColumnName="PURCHASETAXITEMGROUP" />
+          <ScalarProperty Name="BASECOMPARISONUNITCODE" ColumnName="BASECOMPARISONUNITCODE" />
+          <ScalarProperty Name="KEYINGINPRICE" ColumnName="KEYINGINPRICE" />
+          <ScalarProperty Name="ETGBUSINESSGROUP" ColumnName="ETGBUSINESSGROUP" />
+          <ScalarProperty Name="ETGDIVISIONGROUP" ColumnName="ETGDIVISIONGROUP" />
+          <ScalarProperty Name="ETGINVENTUSAGECATEGORYID" ColumnName="ETGINVENTUSAGECATEGORYID" />
+          <ScalarProperty Name="CLSPU" ColumnName="CLSPU" />
+          <ScalarProperty Name="CLSCUSTOMSCATEGORYID" ColumnName="CLSCUSTOMSCATEGORYID" />
+          <ScalarProperty Name="CLSKAPASITEALTGRUP" ColumnName="CLSKAPASITEALTGRUP" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="RecId" ColumnName="RecId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="IsCreateGroupBox" ColumnName="IsCreateGroupBox" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InvoiceHeader">
+      <EntityTypeMapping TypeName="ESCMTestModel.InvoiceHeader">
+        <MappingFragment StoreEntitySet="InvoiceHeader">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="VenderInvoiceNo" ColumnName="VenderInvoiceNo" />
+          <ScalarProperty Name="VenderInvoiceDate" ColumnName="VenderInvoiceDate" />
+          <ScalarProperty Name="ExpNo" ColumnName="ExpNo" />
+          <ScalarProperty Name="ExpDate" ColumnName="ExpDate" />
+          <ScalarProperty Name="ErcNo" ColumnName="ErcNo" />
+          <ScalarProperty Name="ErcDate" ColumnName="ErcDate" />
+          <ScalarProperty Name="BlNo" ColumnName="BlNo" />
+          <ScalarProperty Name="BankId" ColumnName="BankId" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="BankAddress" ColumnName="BankAddress" />
+          <ScalarProperty Name="BankAccountNumber" ColumnName="BankAccountNumber" />
+          <ScalarProperty Name="SwiftCode" ColumnName="SwiftCode" />
+          <ScalarProperty Name="IBAN" ColumnName="IBAN" />
+          <ScalarProperty Name="Eta" ColumnName="Eta" />
+          <ScalarProperty Name="ShipmentDate" ColumnName="ShipmentDate" />
+          <ScalarProperty Name="VesselName" ColumnName="VesselName" />
+          <ScalarProperty Name="Voyage" ColumnName="Voyage" />
+          <ScalarProperty Name="ReceiptDate" ColumnName="ReceiptDate" />
+          <ScalarProperty Name="ReceiptNo" ColumnName="ReceiptNo" />
+          <ScalarProperty Name="ShippingCompanyName" ColumnName="ShippingCompanyName" />
+          <ScalarProperty Name="TrackingNumber" ColumnName="TrackingNumber" />
+          <ScalarProperty Name="VendAccount" ColumnName="VendAccount" />
+          <ScalarProperty Name="InventSeasonId" ColumnName="InventSeasonId" />
+          <ScalarProperty Name="InvoiceStatus" ColumnName="InvoiceStatus" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Commissioninvoice" ColumnName="Commissioninvoice" />
+          <ScalarProperty Name="CommissioninvoiceNo" ColumnName="CommissioninvoiceNo" />
+          <ScalarProperty Name="AgentAccountNumber" ColumnName="AgentAccountNumber" />
+          <ScalarProperty Name="AgentComission" ColumnName="AgentComission" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+          <ScalarProperty Name="VesaikIhbarDate" ColumnName="VesaikIhbarDate" />
+          <ScalarProperty Name="DekontGelisDate" ColumnName="DekontGelisDate" />
+          <ScalarProperty Name="PaymentAmount" ColumnName="PaymentAmount" />
+          <ScalarProperty Name="VesaikType" ColumnName="VesaikType" />
+          <ScalarProperty Name="LCRefNo" ColumnName="LCRefNo" />
+          <ScalarProperty Name="VesaikAmount" ColumnName="VesaikAmount" />
+          <ScalarProperty Name="PaymentDescription" ColumnName="PaymentDescription" />
+          <ScalarProperty Name="BankNamePayment" ColumnName="BankNamePayment" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="PlListText" ColumnName="PlListText" />
+          <ScalarProperty Name="PONo" ColumnName="PONo" />
+          <ScalarProperty Name="LCNo" ColumnName="LCNo" />
+          <ScalarProperty Name="LCBankName" ColumnName="LCBankName" />
+          <ScalarProperty Name="PaymentListNo" ColumnName="PaymentListNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InvoiceLine">
+      <EntityTypeMapping TypeName="ESCMTestModel.InvoiceLine">
+        <MappingFragment StoreEntitySet="InvoiceLine">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="InvoiceHeaderId" ColumnName="InvoiceHeaderId" />
+          <ScalarProperty Name="PLId" ColumnName="PLId" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Konsimento">
+      <EntityTypeMapping TypeName="ESCMTestModel.Konsimento">
+        <MappingFragment StoreEntitySet="Konsimento">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="KonsimentoNo" ColumnName="KonsimentoNo" />
+          <ScalarProperty Name="OrdinoDate" ColumnName="OrdinoDate" />
+          <ScalarProperty Name="KonsimentoDate" ColumnName="KonsimentoDate" />
+          <ScalarProperty Name="VendAccountId" ColumnName="VendAccountId" />
+          <ScalarProperty Name="ShiptoAccountId" ColumnName="ShiptoAccountId" />
+          <ScalarProperty Name="BilltoAccountId" ColumnName="BilltoAccountId" />
+          <ScalarProperty Name="DeliveryType" ColumnName="DeliveryType" />
+          <ScalarProperty Name="ForwarderId" ColumnName="ForwarderId" />
+          <ScalarProperty Name="OriginCharges" ColumnName="OriginCharges" />
+          <ScalarProperty Name="OriginChargesMoneyId" ColumnName="OriginChargesMoneyId" />
+          <ScalarProperty Name="FreightCharges" ColumnName="FreightCharges" />
+          <ScalarProperty Name="FreightChargesMoneyId" ColumnName="FreightChargesMoneyId" />
+          <ScalarProperty Name="DestinationCharges" ColumnName="DestinationCharges" />
+          <ScalarProperty Name="DestinationChargesMoneyId" ColumnName="DestinationChargesMoneyId" />
+          <ScalarProperty Name="CustomsCharges" ColumnName="CustomsCharges" />
+          <ScalarProperty Name="CustomsChargesMoneyId" ColumnName="CustomsChargesMoneyId" />
+          <ScalarProperty Name="DemurrageCharges" ColumnName="DemurrageCharges" />
+          <ScalarProperty Name="DemurrageChargesMoneyId" ColumnName="DemurrageChargesMoneyId" />
+          <ScalarProperty Name="AdhocCharges" ColumnName="AdhocCharges" />
+          <ScalarProperty Name="AdhocChargesMoneyId" ColumnName="AdhocChargesMoneyId" />
+          <ScalarProperty Name="StorageCharges" ColumnName="StorageCharges" />
+          <ScalarProperty Name="StorageChargesMoneyId" ColumnName="StorageChargesMoneyId" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="FileNo" ColumnName="FileNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KonsimentoInPackingList">
+      <EntityTypeMapping TypeName="ESCMTestModel.KonsimentoInPackingList">
+        <MappingFragment StoreEntitySet="KonsimentoInPackingList">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="KosimentoId" ColumnName="KosimentoId" />
+          <ScalarProperty Name="PackingListId" ColumnName="PackingListId" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LanguageRefTable">
+      <EntityTypeMapping TypeName="ESCMTestModel.LanguageRefTable">
+        <MappingFragment StoreEntitySet="LanguageRefTable">
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="EscmRefId" ColumnName="EscmRefId" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LanguageTable">
+      <EntityTypeMapping TypeName="ESCMTestModel.LanguageTable">
+        <MappingFragment StoreEntitySet="LanguageTable">
+          <ScalarProperty Name="EscmRefId" ColumnName="EscmRefId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TableRecId" ColumnName="TableRecId" />
+          <ScalarProperty Name="RecId" ColumnName="RecId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Moduls">
+      <EntityTypeMapping TypeName="ESCMTestModel.Moduls">
+        <MappingFragment StoreEntitySet="Moduls">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ModulName" ColumnName="ModulName" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModulTransactionLog">
+      <EntityTypeMapping TypeName="ESCMTestModel.ModulTransactionLog">
+        <MappingFragment StoreEntitySet="ModulTransactionLog">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="ModulId" ColumnName="ModulId" />
+          <ScalarProperty Name="ProcessCode" ColumnName="ProcessCode" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="EventStartDate" ColumnName="EventStartDate" />
+          <ScalarProperty Name="EventEndDate" ColumnName="EventEndDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PackageBarcode">
+      <EntityTypeMapping TypeName="ESCMTestModel.PackageBarcode">
+        <MappingFragment StoreEntitySet="PackageBarcode">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PackageBarcodeId" ColumnName="PackageBarcodeId" />
+          <ScalarProperty Name="BoxFamilyId" ColumnName="BoxFamilyId" />
+          <ScalarProperty Name="WorkOrderId" ColumnName="WorkOrderId" />
+          <ScalarProperty Name="PackageBarcodeStatus" ColumnName="PackageBarcodeStatus" />
+          <ScalarProperty Name="GroupPackageBarcode" ColumnName="GroupPackageBarcode" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="EntryUserId" ColumnName="EntryUserId" />
+          <ScalarProperty Name="EntryStatus" ColumnName="EntryStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PackageHeader">
+      <EntityTypeMapping TypeName="ESCMTestModel.PackageHeader">
+        <MappingFragment StoreEntitySet="PackageHeader">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BoxFamilyId" ColumnName="BoxFamilyId" />
+          <ScalarProperty Name="PONo" ColumnName="PONo" />
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+          <ScalarProperty Name="BoxTypeId" ColumnName="BoxTypeId" />
+          <ScalarProperty Name="InGroupPackage" ColumnName="InGroupPackage" />
+          <ScalarProperty Name="InPackingList" ColumnName="InPackingList" />
+          <ScalarProperty Name="PLId" ColumnName="PLId" />
+          <ScalarProperty Name="NumberOfPackageQty" ColumnName="NumberOfPackageQty" />
+          <ScalarProperty Name="UnitBoxTotalGrossWeight" ColumnName="UnitBoxTotalGrossWeight" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="IsMixPackage" ColumnName="IsMixPackage" />
+          <ScalarProperty Name="ProcessCode" ColumnName="ProcessCode" />
+          <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+          <ScalarProperty Name="PlOrderStart" ColumnName="PlOrderStart" />
+          <ScalarProperty Name="PlOrderEnd" ColumnName="PlOrderEnd" />
+          <ScalarProperty Name="ForwarderQty" ColumnName="ForwarderQty" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PackageLine">
+      <EntityTypeMapping TypeName="ESCMTestModel.PackageLine">
+        <MappingFragment StoreEntitySet="PackageLine">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PoLineId" ColumnName="PoLineId" />
+          <ScalarProperty Name="PackageHeaderId" ColumnName="PackageHeaderId" />
+          <ScalarProperty Name="QtyInPackage" ColumnName="QtyInPackage" />
+          <ScalarProperty Name="AssortmentQty" ColumnName="AssortmentQty" />
+          <ScalarProperty Name="InventSizeId" ColumnName="InventSizeId" />
+          <ScalarProperty Name="NetWeight" ColumnName="NetWeight" />
+          <ScalarProperty Name="AssormentGroupId" ColumnName="AssormentGroupId" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PackingListHeader">
+      <EntityTypeMapping TypeName="ESCMTestModel.PackingListHeader">
+        <MappingFragment StoreEntitySet="PackingListHeader">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PLNo" ColumnName="PLNo" />
+          <ScalarProperty Name="RefPLId" ColumnName="RefPLId" />
+          <ScalarProperty Name="PLStatus" ColumnName="PLStatus" />
+          <ScalarProperty Name="InventSeasonId" ColumnName="InventSeasonId" />
+          <ScalarProperty Name="VendAccount" ColumnName="VendAccount" />
+          <ScalarProperty Name="TotalNetWeight" ColumnName="TotalNetWeight" />
+          <ScalarProperty Name="TotalGrossWeight" ColumnName="TotalGrossWeight" />
+          <ScalarProperty Name="TotalPackageQty" ColumnName="TotalPackageQty" />
+          <ScalarProperty Name="TotalVolume" ColumnName="TotalVolume" />
+          <ScalarProperty Name="WaitApproveDate" ColumnName="WaitApproveDate" />
+          <ScalarProperty Name="IsInvoiced" ColumnName="IsInvoiced" />
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+          <ScalarProperty Name="ApproveDate" ColumnName="ApproveDate" />
+          <ScalarProperty Name="ForwarderEntryDate" ColumnName="ForwarderEntryDate" />
+          <ScalarProperty Name="ForwarderCheckDate" ColumnName="ForwarderCheckDate" />
+          <ScalarProperty Name="ForwarderRevizionDate" ColumnName="ForwarderRevizionDate" />
+          <ScalarProperty Name="LogisticApproveDate" ColumnName="LogisticApproveDate" />
+          <ScalarProperty Name="PlannedDepartureDate" ColumnName="PlannedDepartureDate" />
+          <ScalarProperty Name="RealizedDepartureDate" ColumnName="RealizedDepartureDate" />
+          <ScalarProperty Name="PlannedArrivalDate" ColumnName="PlannedArrivalDate" />
+          <ScalarProperty Name="RealizedArrivalDate" ColumnName="RealizedArrivalDate" />
+          <ScalarProperty Name="LclFcl" ColumnName="LclFcl" />
+          <ScalarProperty Name="InPlanning" ColumnName="InPlanning" />
+          <ScalarProperty Name="DecisionDate" ColumnName="DecisionDate" />
+          <ScalarProperty Name="DeliveryNoticeDate" ColumnName="DeliveryNoticeDate" />
+          <ScalarProperty Name="FinalToleranceDate" ColumnName="FinalToleranceDate" />
+          <ScalarProperty Name="PenaltyDebitNote" ColumnName="PenaltyDebitNote" />
+          <ScalarProperty Name="PenaltyNote" ColumnName="PenaltyNote" />
+          <ScalarProperty Name="IsSignedPaperTaken" ColumnName="IsSignedPaperTaken" />
+          <ScalarProperty Name="DepodEntryDate" ColumnName="DepodEntryDate" />
+          <ScalarProperty Name="SignedPaperDescription" ColumnName="SignedPaperDescription" />
+          <ScalarProperty Name="ForwarderCheckDateHistory" ColumnName="ForwarderCheckDateHistory" />
+          <ScalarProperty Name="VendorIncoterm" ColumnName="VendorIncoterm" />
+          <ScalarProperty Name="VendorForwarderId" ColumnName="VendorForwarderId" />
+          <ScalarProperty Name="VendorPortOfLoadingId" ColumnName="VendorPortOfLoadingId" />
+          <ScalarProperty Name="EstHandoverDate" ColumnName="EstHandoverDate" />
+          <ScalarProperty Name="DeliveryType" ColumnName="DeliveryType" />
+          <ScalarProperty Name="PLSequenceNo" ColumnName="PLSequenceNo" />
+          <ScalarProperty Name="ShipToRoute" ColumnName="ShipToRoute" />
+          <ScalarProperty Name="BillToRoute" ColumnName="BillToRoute" />
+          <ScalarProperty Name="DestinationGroupId" ColumnName="DestinationGroupId" />
+          <ScalarProperty Name="PaymentTermId" ColumnName="PaymentTermId" />
+          <ScalarProperty Name="ShipTo" ColumnName="ShipTo" />
+          <ScalarProperty Name="BillTo" ColumnName="BillTo" />
+          <ScalarProperty Name="AgentAccountNumber" ColumnName="AgentAccountNumber" />
+          <ScalarProperty Name="AgentComission" ColumnName="AgentComission" />
+          <ScalarProperty Name="IsSamplePo" ColumnName="IsSamplePo" />
+          <ScalarProperty Name="VendorId" ColumnName="VendorId" />
+          <ScalarProperty Name="InvoiceRuleId" ColumnName="InvoiceRuleId" />
+          <ScalarProperty Name="LcNo" ColumnName="LcNo" />
+          <ScalarProperty Name="DeliveryTypeApproved" ColumnName="DeliveryTypeApproved" />
+          <ScalarProperty Name="PortOfDischargeId" ColumnName="PortOfDischargeId" />
+          <ScalarProperty Name="FinalDestination" ColumnName="FinalDestination" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="IsGPL" ColumnName="IsGPL" />
+          <ScalarProperty Name="Info" ColumnName="Info" />
+          <ScalarProperty Name="ControlDate" ColumnName="ControlDate" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="ProductCount" ColumnName="ProductCount" />
+          <ScalarProperty Name="PONo" ColumnName="PONo" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="LCBankName" ColumnName="LCBankName" />
+          <ScalarProperty Name="InventColorId" ColumnName="InventColorId" />
+          <ScalarProperty Name="IsCreatedAN" ColumnName="IsCreatedAN" />
+          <ScalarProperty Name="DirectStatus" ColumnName="DirectStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PackingListLine">
+      <EntityTypeMapping TypeName="ESCMTestModel.PackingListLine">
+        <MappingFragment StoreEntitySet="PackingListLine">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PackingListHeaderId" ColumnName="PackingListHeaderId" />
+          <ScalarProperty Name="PackageId" ColumnName="PackageId" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pattern">
+      <EntityTypeMapping TypeName="ESCMTestModel.Pattern">
+        <MappingFragment StoreEntitySet="Pattern">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PatternId" ColumnName="PatternId" />
+          <ScalarProperty Name="PatternName" ColumnName="PatternName" />
+          <ScalarProperty Name="BusinessGroup" ColumnName="BusinessGroup" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="RecId" ColumnName="RecId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymTerm">
+      <EntityTypeMapping TypeName="ESCMTestModel.PaymTerm">
+        <MappingFragment StoreEntitySet="PaymTerm">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PaymTermId" ColumnName="PaymTermId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="RecId" ColumnName="RecId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PenaltyByDeliveryDate">
+      <EntityTypeMapping TypeName="ESCMTestModel.PenaltyByDeliveryDate">
+        <MappingFragment StoreEntitySet="PenaltyByDeliveryDate">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Group" ColumnName="Group" />
+          <ScalarProperty Name="DeliveryMode" ColumnName="DeliveryMode" />
+          <ScalarProperty Name="MinDay" ColumnName="MinDay" />
+          <ScalarProperty Name="MaxDay" ColumnName="MaxDay" />
+          <ScalarProperty Name="DiscountRate" ColumnName="DiscountRate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PenaltyByQuantity">
+      <EntityTypeMapping TypeName="ESCMTestModel.PenaltyByQuantity">
+        <MappingFragment StoreEntitySet="PenaltyByQuantity">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Group" ColumnName="Group" />
+          <ScalarProperty Name="MinRate" ColumnName="MinRate" />
+          <ScalarProperty Name="MaxRate" ColumnName="MaxRate" />
+          <ScalarProperty Name="DiscountRate" ColumnName="DiscountRate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ports">
+      <EntityTypeMapping TypeName="ESCMTestModel.Ports">
+        <MappingFragment StoreEntitySet="Ports">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PortCode" ColumnName="PortCode" />
+          <ScalarProperty Name="PortName" ColumnName="PortName" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="BookingDisplay" ColumnName="BookingDisplay" />
+          <ScalarProperty Name="TransitDisplay" ColumnName="TransitDisplay" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="IsPortOfDischarge" ColumnName="IsPortOfDischarge" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Price">
+      <EntityTypeMapping TypeName="ESCMTestModel.Price">
+        <MappingFragment StoreEntitySet="Price">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="InventDimId" ColumnName="InventDimId" />
+          <ScalarProperty Name="Accountrelation" ColumnName="Accountrelation" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="RecId" ColumnName="RecId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="InventColorId" ColumnName="InventColorId" />
+          <ScalarProperty Name="InventStyleId" ColumnName="InventStyleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProcessType">
+      <EntityTypeMapping TypeName="ESCMTestModel.ProcessType">
+        <MappingFragment StoreEntitySet="ProcessType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ModulId" ColumnName="ModulId" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="ESCMTestModel.Products">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="InventSeasonId" ColumnName="InventSeasonId" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="InventColorId" ColumnName="InventColorId" />
+          <ScalarProperty Name="InventStyleId" ColumnName="InventStyleId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ThemeId" ColumnName="ThemeId" />
+          <ScalarProperty Name="FabricCompositionId" ColumnName="FabricCompositionId" />
+          <ScalarProperty Name="PatternId" ColumnName="PatternId" />
+          <ScalarProperty Name="ArticleCode" ColumnName="ArticleCode" />
+          <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+          <ScalarProperty Name="BusinessGroup" ColumnName="BusinessGroup" />
+          <ScalarProperty Name="DivisionGroup" ColumnName="DivisionGroup" />
+          <ScalarProperty Name="RetailGroup" ColumnName="RetailGroup" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="RecId" ColumnName="RecId" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="IsCoated" ColumnName="IsCoated" />
+          <ScalarProperty Name="CLSApproveFabricComposition" ColumnName="CLSApproveFabricComposition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PurchaseOrderHeader">
+      <EntityTypeMapping TypeName="ESCMTestModel.PurchaseOrderHeader">
+        <MappingFragment StoreEntitySet="PurchaseOrderHeader">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PONo" ColumnName="PONo" />
+          <ScalarProperty Name="VendAccount" ColumnName="VendAccount" />
+          <ScalarProperty Name="InvoiceAccount" ColumnName="InvoiceAccount" />
+          <ScalarProperty Name="AgentId" ColumnName="AgentId" />
+          <ScalarProperty Name="AgentComission" ColumnName="AgentComission" />
+          <ScalarProperty Name="PurchName" ColumnName="PurchName" />
+          <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+          <ScalarProperty Name="POStatus" ColumnName="POStatus" />
+          <ScalarProperty Name="InventSeasonId" ColumnName="InventSeasonId" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="CountryOfOrigin" ColumnName="CountryOfOrigin" />
+          <ScalarProperty Name="FSHDivisionGroupId" ColumnName="FSHDivisionGroupId" />
+          <ScalarProperty Name="RBORetailGroupId" ColumnName="RBORetailGroupId" />
+          <ScalarProperty Name="FSHBusinessGroupId" ColumnName="FSHBusinessGroupId" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="CountryOfOriginOth" ColumnName="CountryOfOriginOth" />
+          <ScalarProperty Name="Mt" ColumnName="Mt" />
+          <ScalarProperty Name="Merch" ColumnName="Merch" />
+          <ScalarProperty Name="IsFreeOfCharge" ColumnName="IsFreeOfCharge" />
+          <ScalarProperty Name="RecId" ColumnName="RecId" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="POOpen" ColumnName="POOpen" />
+          <ScalarProperty Name="BillTo" ColumnName="BillTo" />
+          <ScalarProperty Name="SubName" ColumnName="SubName" />
+          <ScalarProperty Name="SubAccountNum" ColumnName="SubAccountNum" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="BillToRouteId" ColumnName="BillToRouteId" />
+          <ScalarProperty Name="Technician" ColumnName="Technician" />
+          <ScalarProperty Name="IsSamplePo" ColumnName="IsSamplePo" />
+          <ScalarProperty Name="Closed" ColumnName="Closed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PurchaseOrderLine">
+      <EntityTypeMapping TypeName="ESCMTestModel.PurchaseOrderLine">
+        <MappingFragment StoreEntitySet="PurchaseOrderLine">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PONo" ColumnName="PONo" />
+          <ScalarProperty Name="ThemeId" ColumnName="ThemeId" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="InventColorId" ColumnName="InventColorId" />
+          <ScalarProperty Name="InventStyleId" ColumnName="InventStyleId" />
+          <ScalarProperty Name="InventSizeId" ColumnName="InventSizeId" />
+          <ScalarProperty Name="InventSeasonId" ColumnName="InventSeasonId" />
+          <ScalarProperty Name="PurchPoolId" ColumnName="PurchPoolId" />
+          <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+          <ScalarProperty Name="ModelNum" ColumnName="ModelNum" />
+          <ScalarProperty Name="IsSizePO" ColumnName="IsSizePO" />
+          <ScalarProperty Name="AssortmentGroupId" ColumnName="AssortmentGroupId" />
+          <ScalarProperty Name="PurchQtyOrdered" ColumnName="PurchQtyOrdered" />
+          <ScalarProperty Name="LineNum" ColumnName="LineNum" />
+          <ScalarProperty Name="POStatus" ColumnName="POStatus" />
+          <ScalarProperty Name="DeliveryMode" ColumnName="DeliveryMode" />
+          <ScalarProperty Name="FabricCompositionId" ColumnName="FabricCompositionId" />
+          <ScalarProperty Name="LotQty" ColumnName="LotQty" />
+          <ScalarProperty Name="QtyInAssortment" ColumnName="QtyInAssortment" />
+          <ScalarProperty Name="MinDeliveryTolDays" ColumnName="MinDeliveryTolDays" />
+          <ScalarProperty Name="DeliveryDateRev" ColumnName="DeliveryDateRev" />
+          <ScalarProperty Name="LabelDesignType" ColumnName="LabelDesignType" />
+          <ScalarProperty Name="ClsWeight" ColumnName="ClsWeight" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ShipTo" ColumnName="ShipTo" />
+          <ScalarProperty Name="LCNo" ColumnName="LCNo" />
+          <ScalarProperty Name="PaymentTermId" ColumnName="PaymentTermId" />
+          <ScalarProperty Name="PurchPrice" ColumnName="PurchPrice" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="RecId" ColumnName="RecId" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="LCBankName" ColumnName="LCBankName" />
+          <ScalarProperty Name="ShipToRouteId" ColumnName="ShipToRouteId" />
+          <ScalarProperty Name="LCBankGroupId" ColumnName="LCBankGroupId" />
+          <ScalarProperty Name="LCPaymTermName" ColumnName="LCPaymTermName" />
+          <ScalarProperty Name="LCPaymTermId" ColumnName="LCPaymTermId" />
+          <ScalarProperty Name="InBoundPacking" ColumnName="InBoundPacking" />
+          <ScalarProperty Name="Incoterm" ColumnName="Incoterm" />
+          <ScalarProperty Name="Closed" ColumnName="Closed" />
+          <ScalarProperty Name="IsManualUpdate" ColumnName="IsManualUpdate" />
+          <ScalarProperty Name="SendUpdateDate" ColumnName="SendUpdateDate" />
+          <ScalarProperty Name="StoreInDate" ColumnName="StoreInDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalesPool">
+      <EntityTypeMapping TypeName="ESCMTestModel.SalesPool">
+        <MappingFragment StoreEntitySet="SalesPool">
+          <ScalarProperty Name="RecId" ColumnName="RecId" />
+          <ScalarProperty Name="SalesPoolId" ColumnName="SalesPoolId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ExportTransit" ColumnName="ExportTransit" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="DestinationGroupId" ColumnName="DestinationGroupId" />
+          <ScalarProperty Name="DestinationGroupIdOld" ColumnName="DestinationGroupIdOld" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="DestinationGroupName" ColumnName="DestinationGroupName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Seasons">
+      <EntityTypeMapping TypeName="ESCMTestModel.Seasons">
+        <MappingFragment StoreEntitySet="Seasons">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="InventSeasonId" ColumnName="InventSeasonId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="RecId" ColumnName="RecId" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="FinishDate" ColumnName="FinishDate" />
+          <ScalarProperty Name="InUse" ColumnName="InUse" />
+          <ScalarProperty Name="SalesSeason" ColumnName="SalesSeason" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShipToRoute">
+      <EntityTypeMapping TypeName="ESCMTestModel.ShipToRoute">
+        <MappingFragment StoreEntitySet="ShipToRoute">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ShipToRouteId" ColumnName="ShipToRouteId" />
+          <ScalarProperty Name="SequenceNo" ColumnName="SequenceNo" />
+          <ScalarProperty Name="ShipToAccount" ColumnName="ShipToAccount" />
+          <ScalarProperty Name="InventLocation" ColumnName="InventLocation" />
+          <ScalarProperty Name="ClsQuality" ColumnName="ClsQuality" />
+          <ScalarProperty Name="PortOfDischargeId" ColumnName="PortOfDischargeId" />
+          <ScalarProperty Name="FinalDestination" ColumnName="FinalDestination" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Storage" ColumnName="Storage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sizes">
+      <EntityTypeMapping TypeName="ESCMTestModel.Sizes">
+        <MappingFragment StoreEntitySet="Sizes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="InventSizeId" ColumnName="InventSizeId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="RecId" ColumnName="RecId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SizesOrdered">
+      <EntityTypeMapping TypeName="ESCMTestModel.SizesOrdered">
+        <MappingFragment StoreEntitySet="SizesOrdered">
+          <ScalarProperty Name="SIZE_" ColumnName="SIZE_" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="RECID" ColumnName="RECID" />
+          <ScalarProperty Name="CLS_ROW" ColumnName="CLS_ROW" />
+          <ScalarProperty Name="CLS_COLUMN" ColumnName="CLS_COLUMN" />
+          <ScalarProperty Name="CLS_SIZETYPE" ColumnName="CLS_SIZETYPE" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="OrderNum" ColumnName="OrderNum" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SizeWeight">
+      <EntityTypeMapping TypeName="ESCMTestModel.SizeWeight">
+        <MappingFragment StoreEntitySet="SizeWeight">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SeasonId" ColumnName="SeasonId" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="InventStyle" ColumnName="InventStyle" />
+          <ScalarProperty Name="InventColor" ColumnName="InventColor" />
+          <ScalarProperty Name="InventSizeId" ColumnName="InventSizeId" />
+          <ScalarProperty Name="NetWeight" ColumnName="NetWeight" />
+          <ScalarProperty Name="VendAccount" ColumnName="VendAccount" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+          <ScalarProperty Name="SubVendAccountNum" ColumnName="SubVendAccountNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubVendAccount">
+      <EntityTypeMapping TypeName="ESCMTestModel.SubVendAccount">
+        <MappingFragment StoreEntitySet="SubVendAccount">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="VendAccount" ColumnName="VendAccount" />
+          <ScalarProperty Name="SubVendAccount1" ColumnName="SubVendAccount" />
+          <ScalarProperty Name="RecId" ColumnName="RecId" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Theme">
+      <EntityTypeMapping TypeName="ESCMTestModel.Theme">
+        <MappingFragment StoreEntitySet="Theme">
+          <ScalarProperty Name="ThemeId" ColumnName="ThemeId" />
+          <ScalarProperty Name="ThemeName" ColumnName="ThemeName" />
+          <ScalarProperty Name="RecId" ColumnName="RecId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VenderBank">
+      <EntityTypeMapping TypeName="ESCMTestModel.VenderBank">
+        <MappingFragment StoreEntitySet="VenderBank">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="BankAddress" ColumnName="BankAddress" />
+          <ScalarProperty Name="BankAccountNumber" ColumnName="BankAccountNumber" />
+          <ScalarProperty Name="SwiftCode" ColumnName="SwiftCode" />
+          <ScalarProperty Name="IBAN" ColumnName="IBAN" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="DefaultBank" ColumnName="DefaultBank" />
+          <ScalarProperty Name="BanksStatus" ColumnName="BanksStatus" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WogiTransfer">
+      <EntityTypeMapping TypeName="ESCMTestModel.WogiTransfer">
+        <MappingFragment StoreEntitySet="WogiTransfer">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="WorkOrderGroupId" ColumnName="WorkOrderGroupId" />
+          <ScalarProperty Name="BeyannameNo" ColumnName="BeyannameNo" />
+          <ScalarProperty Name="ColorId" ColumnName="ColorId" />
+          <ScalarProperty Name="Gtip" ColumnName="Gtip" />
+          <ScalarProperty Name="ImportFileNo" ColumnName="ImportFileNo" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="KalemNo" ColumnName="KalemNo" />
+          <ScalarProperty Name="PlNo" ColumnName="PlNo" />
+          <ScalarProperty Name="QualityVersiyonId" ColumnName="QualityVersiyonId" />
+          <ScalarProperty Name="SeasonId" ColumnName="SeasonId" />
+          <ScalarProperty Name="SecondaryItemType" ColumnName="SecondaryItemType" />
+          <ScalarProperty Name="TransferType" ColumnName="TransferType" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkOrder">
+      <EntityTypeMapping TypeName="ESCMTestModel.WorkOrder">
+        <MappingFragment StoreEntitySet="WorkOrder">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CustomWorkOrderId" ColumnName="CustomWorkOrderId" />
+          <ScalarProperty Name="WorkOrderGroupId" ColumnName="WorkOrderGroupId" />
+          <ScalarProperty Name="WorkOrderGuid" ColumnName="WorkOrderGuid" />
+          <ScalarProperty Name="WorkOrderStatusId" ColumnName="WorkOrderStatusId" />
+          <ScalarProperty Name="WorkOrderTransferZoneId" ColumnName="WorkOrderTransferZoneId" />
+          <ScalarProperty Name="WorkOrderTypeId" ColumnName="WorkOrderTypeId" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="InsertTime" ColumnName="InsertTime" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ProblemDescription" ColumnName="ProblemDescription" />
+          <ScalarProperty Name="FileNo" ColumnName="FileNo" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="EquipmentNo" ColumnName="EquipmentNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkOrderCustomsCompany">
+      <EntityTypeMapping TypeName="ESCMTestModel.WorkOrderCustomsCompany">
+        <MappingFragment StoreEntitySet="WorkOrderCustomsCompany">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkOrderDetail">
+      <EntityTypeMapping TypeName="ESCMTestModel.WorkOrderDetail">
+        <MappingFragment StoreEntitySet="WorkOrderDetail">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="WorkOrderDetailGuid" ColumnName="WorkOrderDetailGuid" />
+          <ScalarProperty Name="WorkOrderId" ColumnName="WorkOrderId" />
+          <ScalarProperty Name="WorkOrderGroupId" ColumnName="WorkOrderGroupId" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="PackingListId" ColumnName="PackingListId" />
+          <ScalarProperty Name="ModelNo" ColumnName="ModelNo" />
+          <ScalarProperty Name="InventStyleId" ColumnName="InventStyleId" />
+          <ScalarProperty Name="ArticleCode" ColumnName="ArticleCode" />
+          <ScalarProperty Name="DestinationId" ColumnName="DestinationId" />
+          <ScalarProperty Name="ColorId" ColumnName="ColorId" />
+          <ScalarProperty Name="TotalGrossWeight" ColumnName="TotalGrossWeight" />
+          <ScalarProperty Name="TotalNetWeight" ColumnName="TotalNetWeight" />
+          <ScalarProperty Name="BoxQty" ColumnName="BoxQty" />
+          <ScalarProperty Name="ProductQty" ColumnName="ProductQty" />
+          <ScalarProperty Name="WorkOrderInvoiceAmount" ColumnName="WorkOrderInvoiceAmount" />
+          <ScalarProperty Name="WorkOrderDetailAffairsId" ColumnName="WorkOrderDetailAffairsId" />
+          <ScalarProperty Name="rec_id" ColumnName="rec_id" />
+          <ScalarProperty Name="GTIP" ColumnName="GTIP" />
+          <ScalarProperty Name="AsnLineId" ColumnName="AsnLineId" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="EquipmentNo" ColumnName="EquipmentNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkOrderDetailAffairs">
+      <EntityTypeMapping TypeName="ESCMTestModel.WorkOrderDetailAffairs">
+        <MappingFragment StoreEntitySet="WorkOrderDetailAffairs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="WorkOrderAffairsGuid" ColumnName="WorkOrderAffairsGuid" />
+          <ScalarProperty Name="WorkOrderId" ColumnName="WorkOrderId" />
+          <ScalarProperty Name="WorkOrderGuid" ColumnName="WorkOrderGuid" />
+          <ScalarProperty Name="DescriptionOfGoods" ColumnName="DescriptionOfGoods" />
+          <ScalarProperty Name="PLNo" ColumnName="PLNo" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="InventStyleId" ColumnName="InventStyleId" />
+          <ScalarProperty Name="ArticleCode" ColumnName="ArticleCode" />
+          <ScalarProperty Name="Uom" ColumnName="Uom" />
+          <ScalarProperty Name="ActualQuantity" ColumnName="ActualQuantity" />
+          <ScalarProperty Name="InvoiceQuantity" ColumnName="InvoiceQuantity" />
+          <ScalarProperty Name="CountryOfOrigian" ColumnName="CountryOfOrigian" />
+          <ScalarProperty Name="GrossWeight" ColumnName="GrossWeight" />
+          <ScalarProperty Name="NetWeight" ColumnName="NetWeight" />
+          <ScalarProperty Name="IncotermCode" ColumnName="IncotermCode" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="InvoiceAmount" ColumnName="InvoiceAmount" />
+          <ScalarProperty Name="PackageType" ColumnName="PackageType" />
+          <ScalarProperty Name="NumberOfPackageQty" ColumnName="NumberOfPackageQty" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="ProductGroup" ColumnName="ProductGroup" />
+          <ScalarProperty Name="Fabric" ColumnName="Fabric" />
+          <ScalarProperty Name="KonsimentoNo" ColumnName="KonsimentoNo" />
+          <ScalarProperty Name="PaymTerm" ColumnName="PaymTerm" />
+          <ScalarProperty Name="CommercialDefinition" ColumnName="CommercialDefinition" />
+          <ScalarProperty Name="CommisionInvoiceAmount" ColumnName="CommisionInvoiceAmount" />
+          <ScalarProperty Name="CommisionCurrencyType" ColumnName="CommisionCurrencyType" />
+          <ScalarProperty Name="rec_id" ColumnName="rec_id" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="GTIP" ColumnName="GTIP" />
+          <ScalarProperty Name="AsnLineId" ColumnName="AsnLineId" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Beneficiary" ColumnName="Beneficiary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkOrderFile">
+      <EntityTypeMapping TypeName="ESCMTestModel.WorkOrderFile">
+        <MappingFragment StoreEntitySet="WorkOrderFile">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="WorkOrderId" ColumnName="WorkOrderId" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkOrderGroup">
+      <EntityTypeMapping TypeName="ESCMTestModel.WorkOrderGroup">
+        <MappingFragment StoreEntitySet="WorkOrderGroup">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="WorkOrderGroupGuid" ColumnName="WorkOrderGroupGuid" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="WogiName" ColumnName="WogiName" />
+          <ScalarProperty Name="IsSend" ColumnName="IsSend" />
+          <ScalarProperty Name="WorkOrderTypeId" ColumnName="WorkOrderTypeId" />
+          <ScalarProperty Name="DeclarationRegistrationNo" ColumnName="DeclarationRegistrationNo" />
+          <ScalarProperty Name="DeclarationRegistrationDate" ColumnName="DeclarationRegistrationDate" />
+          <ScalarProperty Name="GDMessage" ColumnName="GDMessage" />
+          <ScalarProperty Name="ResponseStatus" ColumnName="ResponseStatus" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="IsCreatedAN" ColumnName="IsCreatedAN" />
+          <ScalarProperty Name="ANWogiNo" ColumnName="ANWogiNo" />
+          <ScalarProperty Name="CustomsCompanyId" ColumnName="CustomsCompanyId" />
+          <ScalarProperty Name="TaxPaymentDate" ColumnName="TaxPaymentDate" />
+          <ScalarProperty Name="DischargeRecordDate" ColumnName="DischargeRecordDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkOrderStatus">
+      <EntityTypeMapping TypeName="ESCMTestModel.WorkOrderStatus">
+        <MappingFragment StoreEntitySet="WorkOrderStatus">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkOrderStatusHistory">
+      <EntityTypeMapping TypeName="ESCMTestModel.WorkOrderStatusHistory">
+        <MappingFragment StoreEntitySet="WorkOrderStatusHistory">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="WorkOrderId" ColumnName="WorkOrderId" />
+          <ScalarProperty Name="WorkOrderStatusId" ColumnName="WorkOrderStatusId" />
+          <ScalarProperty Name="InsertTime" ColumnName="InsertTime" />
+          <ScalarProperty Name="WorkOrderStatus" ColumnName="WorkOrderStatus" />
+          <ScalarProperty Name="WorkOrderSubstatus" ColumnName="WorkOrderSubstatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkOrderTransferZone">
+      <EntityTypeMapping TypeName="ESCMTestModel.WorkOrderTransferZone">
+        <MappingFragment StoreEntitySet="WorkOrderTransferZone">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkOrderType">
+      <EntityTypeMapping TypeName="ESCMTestModel.WorkOrderType">
+        <MappingFragment StoreEntitySet="WorkOrderType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkOrderTypeTransferZone">
+      <EntityTypeMapping TypeName="ESCMTestModel.WorkOrderTypeTransferZone">
+        <MappingFragment StoreEntitySet="WorkOrderTypeTransferZone">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="WorkOrderTypeId" ColumnName="WorkOrderTypeId" />
+          <ScalarProperty Name="WorkOrderTransferZoneId" ColumnName="WorkOrderTransferZoneId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Incoterm">
+      <EntityTypeMapping TypeName="ESCMTestModel.Incoterm">
+        <MappingFragment StoreEntitySet="Incoterm">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IncotermType" ColumnName="IncotermType" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vessel">
+      <EntityTypeMapping TypeName="ESCMTestModel.Vessel">
+        <MappingFragment StoreEntitySet="Vessel">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ImoNo" ColumnName="ImoNo" />
+          <ScalarProperty Name="VesselName" ColumnName="VesselName" />
+          <ScalarProperty Name="ProduceDate" ColumnName="ProduceDate" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="GrossTonnage" ColumnName="GrossTonnage" />
+          <ScalarProperty Name="Classification" ColumnName="Classification" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="Stat" ColumnName="Stat" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedUserId" ColumnName="ModifiedUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

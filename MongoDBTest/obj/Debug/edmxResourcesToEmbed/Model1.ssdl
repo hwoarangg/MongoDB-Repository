@@ -1,0 +1,1800 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ESCMTestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Accounts">
+    <Key>
+      <PropertyRef Name="AccountCode" />
+      <PropertyRef Name="AccountType" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountCode" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="AccountName" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Address" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AccountInvoceCode" Type="int" Nullable="false" />
+    <Property Name="AccountType" Type="tinyint" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="RecId" Type="bigint" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="CommissionInvoice" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="CountryCode" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ApprovalMask">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PLNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PLId" Type="bigint" Nullable="false" />
+    <Property Name="PONo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ItemId" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="InventColorId" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="InventStyleId" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="DestinationId" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="POPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PenaltyPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="DiscountRateCalculated" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PODeliveryDate" Type="datetime" Nullable="false" />
+    <Property Name="EstimatedDate" Type="datetime" Nullable="false" />
+    <Property Name="VendorPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ForwarderId" Type="bigint" Nullable="false" />
+    <Property Name="PODeliveryType" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="DeliveryTypeCalculated" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="DiscountRateEarned" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="DeliveryTypeApproved" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="Incoterm" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="NetWeight" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="GrossWeight" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="QtyProduct" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="PurchQtyOrdered" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="BrandId" Type="nvarchar" MaxLength="3" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="TransType" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="ApprovalMaskDeleted">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" />
+    <Property Name="PLNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PLId" Type="bigint" Nullable="false" />
+    <Property Name="PONo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ItemId" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="InventColorId" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="InventStyleId" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="DestinationId" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="POPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PenaltyPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="DiscountRateCalculated" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PODeliveryDate" Type="datetime" Nullable="false" />
+    <Property Name="EstimatedDate" Type="datetime" Nullable="false" />
+    <Property Name="VendorPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ForwarderId" Type="bigint" Nullable="false" />
+    <Property Name="PODeliveryType" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="DeliveryTypeCalculated" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="DiscountRateEarned" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="DeliveryTypeApproved" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="Incoterm" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="NetWeight" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="GrossWeight" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="QtyProduct" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="PurchQtyOrdered" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="BrandId" Type="nvarchar" MaxLength="3" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="TransType" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="AssortmentTable">
+    <Key>
+      <PropertyRef Name="AssortmentGROUPId" />
+      <PropertyRef Name="SizeDescription" />
+      <PropertyRef Name="AppId" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AssortmentGROUPId" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="SizeDescription" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Qty" Type="int" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="RecId" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Barcode">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ItemId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="BarcodeType" Type="tinyint" Nullable="false" />
+    <Property Name="InventSizeId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="InventColorId" Type="nvarchar" MaxLength="50" />
+    <Property Name="InventStyleId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="InventSeasonId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="AssortmenGroup" Type="nvarchar" MaxLength="50" />
+    <Property Name="ItemBarcode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="AssortiInBarcode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Qty" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="CountryOfOrigin" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="RecId" Type="bigint" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BillToRoute">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BillToRouteId" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="SequenceNo" Type="int" Nullable="false" />
+    <Property Name="InvoiceAccount" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="BrandId" Type="nvarchar" MaxLength="3" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BillToShipToMapping">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SeasonId" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="VendorCountry" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="LDPType" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="DestinationCountry" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="BillTo" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="ShipTo" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BookingHeader">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProcessCode" Type="tinyint" Nullable="false" />
+    <Property Name="InventSeasonId" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="AgentId" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="VendAccount" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="ForwarderId" Type="int" Nullable="false" />
+    <Property Name="PortOfLoadingId" Type="tinyint" Nullable="false" />
+    <Property Name="PortOfDischargeId" Type="tinyint" Nullable="false" />
+    <Property Name="ForwarderOfficeId" Type="bigint" Nullable="false" />
+    <Property Name="NotifyParty" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ShipmentType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PackageType" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DestinationServiceType" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="OriginServiceType" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="EquipmentType" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="EquipmentSize" Type="int" Nullable="false" />
+    <Property Name="NoOfCartons" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="GrossWeight" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Measurement" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="EstimatedDeliveryDate" Type="date" Nullable="false" />
+    <Property Name="DangerousGoods" Type="tinyint" Nullable="false" />
+    <Property Name="VoyNo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="reeferTemperatureUnit" Type="char" MaxLength="1" />
+    <Property Name="reeferTemperature" Type="decimal" Precision="2" Scale="0" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="paymentType" Type="nvarchar" MaxLength="10" />
+    <Property Name="dangerousGoodDesc" Type="nvarchar" MaxLength="50" />
+    <Property Name="equipmentActualSize" Type="nvarchar" MaxLength="10" />
+    <Property Name="noofContainer" Type="nvarchar" MaxLength="50" />
+    <Property Name="ConfirmationDate" Type="datetime" />
+    <Property Name="PoNo" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="ForwarderRefarenceNo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="VendAccountId" Type="bigint" Nullable="false" />
+    <Property Name="CargoDescription" Type="nvarchar(max)" />
+    <Property Name="ForwarderDNDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="BookingLine">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BookingHeaderId" Type="bigint" Nullable="false" />
+    <Property Name="POLineId" Type="bigint" Nullable="false" />
+    <Property Name="QtyinBooking" Type="int" Nullable="false" />
+    <Property Name="CargoType" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="GTIP" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="BoxQty" Type="bigint" Nullable="false" />
+    <Property Name="Volume" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Kilo" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="PurchQtyOrdered" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BoxType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Width" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="Height" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="Length" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="Volume" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="Desi" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="Weight" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="Hanging" Type="bit" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="Metrecube" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="BoxTypeId" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="IsStandartBox" Type="bit" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BusinessGroup">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="BusinessGroup" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="RecId" Type="bigint" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Colors">
+    <Key>
+      <PropertyRef Name="InventColorId" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InventColorId" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="RecId" Type="bigint" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CompareTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="RefTableId" Type="int" Nullable="false" />
+    <Property Name="EscmRefId" Type="int" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="RecId" Type="bigint" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CountryCode" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="CurrencyCode" Type="nvarchar" MaxLength="5" />
+    <Property Name="TaxCode" Type="nvarchar" MaxLength="5" />
+    <Property Name="TextForSticker" Type="nvarchar(max)" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="RecId" Type="bigint" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'ESCMTest.front.CountryChangeAx2012' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="CountryChangeAx2012">
+          <Property Name="OldCountryCode" Type="nvarchar" MaxLength="5" />
+          <Property Name="NewCountrCode" Type="nvarchar" MaxLength="5" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="RecId" Type="bigint" />
+        </EntityType>-->
+  <EntityType Name="CountryTransport">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CountryCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="ShiptoAccountId" Type="bigint" Nullable="false" />
+    <Property Name="ShiptoRouteId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DeliveryMode">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Design">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DesingCode" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="WithPrice" Type="bit" Nullable="false" />
+    <Property Name="LanguageCode" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="RecId" Type="bigint" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DesignField">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DesignLabel">
+    <Key>
+      <PropertyRef Name="LabelCode" />
+      <PropertyRef Name="LanguageCode" />
+      <PropertyRef Name="DesingTypeId" />
+      <PropertyRef Name="AppId" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LabelCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LanguageCode" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="DesingTypeId" Type="bigint" Nullable="false" />
+    <Property Name="Desciription" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DesignType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DivisionGroup">
+    <Key>
+      <PropertyRef Name="DivisionGroup" />
+      <PropertyRef Name="BusinessGroup" />
+      <PropertyRef Name="AppId" />
+      <PropertyRef Name="Stat" />
+    </Key>
+    <Property Name="DivisionGroup" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="BusinessGroup" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="RecId" Type="bigint" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Equipment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EquipmentNo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EquipmentStatus" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="EquipmentSize" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EquipmentType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SealNo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ShipmentType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FreightPayment" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="OriginServiceType" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="DestinationServiceType" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="VGMWeight" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+    <Property Name="ForwarderId" Type="bigint" Nullable="false" />
+    <Property Name="ExcelImport" Type="bit" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="PLNo" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EquipmentInEvent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EquipmentId" Type="bigint" Nullable="false" />
+    <Property Name="EventCode" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="EventCodeShortName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StartDate" Type="date" Nullable="false" />
+    <Property Name="EndDate" Type="date" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EquipmentInPackingList">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EquipmentId" Type="bigint" Nullable="false" />
+    <Property Name="PackingListLineId" Type="bigint" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="3" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EquipmentRoute">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EquipmentId" Type="bigint" Nullable="false" />
+    <Property Name="LegNo" Type="tinyint" Nullable="false" />
+    <Property Name="ShipmentType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ForwarderId" Type="bigint" Nullable="false" />
+    <Property Name="PortOfLoadingId" Type="bigint" Nullable="false" />
+    <Property Name="PortOfDischargeId" Type="bigint" Nullable="false" />
+    <Property Name="DepartureDate" Type="date" Nullable="false" />
+    <Property Name="IMO" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Carrier" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ArrivalDate" Type="date" Nullable="false" />
+    <Property Name="ActualDepartureDate" Type="date" />
+    <Property Name="ActualArrivalDate" Type="date" />
+    <Property Name="TargetForwarderId" Type="bigint" Nullable="false" />
+    <Property Name="Vessel" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Voyage" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="FabricComposition">
+    <Key>
+      <PropertyRef Name="FabricCompositionId" />
+      <PropertyRef Name="AppId" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FabricCompositionId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DescriptionEnglish" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DescriptionRussian" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="RecId" Type="bigint" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Forwarder">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="bigint" Nullable="false" />
+    <Property Name="ForwarderName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ForwarderOffice">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ForwarderId" Type="bigint" Nullable="false" />
+    <Property Name="OfficeName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ESCMTest.front.Incoterm' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Incoterm">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="IncotermType" />
+      <PropertyRef Name="Stat" />
+      <PropertyRef Name="AppId" />
+      <PropertyRef Name="ModifiedDate" />
+      <PropertyRef Name="ModifiedUserId" />
+      <PropertyRef Name="CreatedDate" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IncotermType" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Insurance">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DeliveryType" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PoliceNo" Type="nvarchar(max)" />
+    <Property Name="InsurerId" Type="bigint" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="LCNoList" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LCBankNameList" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FlightNotList" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TransferPointList" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="InvoiceTextList" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EquipmentTextList" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="KosimentoTextList" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TotalAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InsuranceDelivery">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InsuranceId" Type="bigint" Nullable="false" />
+    <Property Name="LegNo" Type="tinyint" Nullable="false" />
+    <Property Name="TransportVehicle" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TransferPoint" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FlightNo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InsuranceFiles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InsuranceId" Type="bigint" Nullable="false" />
+    <Property Name="FileName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InsuranceInKonsimento">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InsuranceId" Type="bigint" Nullable="false" />
+    <Property Name="KonsimentoId" Type="bigint" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="3" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Insurer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" />
+    <Property Name="InsurerName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Phone" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Fax" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InventDim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InventDimId" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="InventSeasonId" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="InventSizeId" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="InventColorId" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="InventStyleId" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="RecId" Type="bigint" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InventDimCombination">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="ITEMID" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="CONFIGID" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="INVENTSIZEID" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="INVENTCOLORID" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="INVENTDIMID" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="RBOVARIANTID" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="INVENTSTYLEID" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="RECID" Type="bigint" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedUserId" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="InventItemGroup">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="ItemGroupId" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="RecId" Type="bigint" Nullable="false" />
+    <Property Name="Commercialitem" Type="int" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InventItemRetailGroup">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GROUPID" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="NAMEALIAS" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="DEPARTMENTID" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="SIZEGROUPID" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="COLORGROUPID" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="ITEMREPORTNAME" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="SHELFREPORTNAME" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="DISPENSEPRINTERGROUPID" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="BARCODESETUPID" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="DISPENSEPRINTINGDISABLED" Type="int" Nullable="false" />
+    <Property Name="USEEANSTANDARDBARCODE" Type="int" Nullable="false" />
+    <Property Name="POSINVENTORYLOOKUP" Type="int" Nullable="false" />
+    <Property Name="STYLEGROUPID" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="FSHREPLENISHMENTRULEID" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="ITEMGROUPID" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="INVENTLOCATIONIDFORPURCHA16016" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="INVENTLOCATIONIDFORINVENTORY" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="INVENTLOCATIONIDFORSALESORDER" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="INVENTMODELGROUPID" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="INVENTDIMGROUPID" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="SALESTAXITEMGROUP" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="PURCHASETAXITEMGROUP" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="BASECOMPARISONUNITCODE" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="KEYINGINPRICE" Type="int" Nullable="false" />
+    <Property Name="ETGBUSINESSGROUP" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="ETGDIVISIONGROUP" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="ETGINVENTUSAGECATEGORYID" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="CLSPU" Type="int" Nullable="false" />
+    <Property Name="CLSCUSTOMSCATEGORYID" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="CLSKAPASITEALTGRUP" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Stat" Type="int" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="RecId" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="IsCreateGroupBox" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InvoiceHeader">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="InvoiceDate" Type="date" Nullable="false" />
+    <Property Name="VenderInvoiceNo" Type="nvarchar" MaxLength="250" />
+    <Property Name="VenderInvoiceDate" Type="date" />
+    <Property Name="ExpNo" Type="nvarchar(max)" />
+    <Property Name="ExpDate" Type="date" />
+    <Property Name="ErcNo" Type="nvarchar(max)" />
+    <Property Name="ErcDate" Type="date" />
+    <Property Name="BlNo" Type="nvarchar(max)" />
+    <Property Name="BankId" Type="bigint" Nullable="false" />
+    <Property Name="BankName" Type="nvarchar(max)" />
+    <Property Name="BankAddress" Type="nvarchar(max)" />
+    <Property Name="BankAccountNumber" Type="nvarchar(max)" />
+    <Property Name="SwiftCode" Type="nvarchar(max)" />
+    <Property Name="IBAN" Type="nvarchar(max)" />
+    <Property Name="Eta" Type="date" />
+    <Property Name="ShipmentDate" Type="date" />
+    <Property Name="VesselName" Type="nvarchar(max)" />
+    <Property Name="Voyage" Type="nvarchar(max)" />
+    <Property Name="ReceiptDate" Type="date" />
+    <Property Name="ReceiptNo" Type="int" />
+    <Property Name="ShippingCompanyName" Type="nvarchar(max)" />
+    <Property Name="TrackingNumber" Type="nvarchar(max)" />
+    <Property Name="VendAccount" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="InventSeasonId" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="InvoiceStatus" Type="tinyint" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Commissioninvoice" Type="bit" Nullable="false" />
+    <Property Name="CommissioninvoiceNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="AgentAccountNumber" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="AgentComission" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="3" />
+    <Property Name="PaymentDate" Type="date" />
+    <Property Name="VesaikIhbarDate" Type="date" />
+    <Property Name="DekontGelisDate" Type="date" />
+    <Property Name="PaymentAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="VesaikType" Type="nvarchar" MaxLength="250" />
+    <Property Name="LCRefNo" Type="nvarchar" MaxLength="250" />
+    <Property Name="VesaikAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PaymentDescription" Type="nvarchar(max)" />
+    <Property Name="BankNamePayment" Type="nvarchar(max)" />
+    <Property Name="TotalPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PlListText" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PONo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LCNo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LCBankName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PaymentListNo" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="InvoiceLine">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceHeaderId" Type="bigint" Nullable="false" />
+    <Property Name="PLId" Type="bigint" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="TransType" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Konsimento">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KonsimentoNo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="OrdinoDate" Type="date" />
+    <Property Name="KonsimentoDate" Type="date" Nullable="false" />
+    <Property Name="VendAccountId" Type="bigint" Nullable="false" />
+    <Property Name="ShiptoAccountId" Type="bigint" Nullable="false" />
+    <Property Name="BilltoAccountId" Type="bigint" Nullable="false" />
+    <Property Name="DeliveryType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ForwarderId" Type="bigint" Nullable="false" />
+    <Property Name="OriginCharges" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="OriginChargesMoneyId" Type="tinyint" Nullable="false" />
+    <Property Name="FreightCharges" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="FreightChargesMoneyId" Type="tinyint" Nullable="false" />
+    <Property Name="DestinationCharges" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="DestinationChargesMoneyId" Type="tinyint" Nullable="false" />
+    <Property Name="CustomsCharges" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CustomsChargesMoneyId" Type="tinyint" Nullable="false" />
+    <Property Name="DemurrageCharges" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="DemurrageChargesMoneyId" Type="tinyint" Nullable="false" />
+    <Property Name="AdhocCharges" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="AdhocChargesMoneyId" Type="tinyint" Nullable="false" />
+    <Property Name="StorageCharges" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="StorageChargesMoneyId" Type="tinyint" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="3" />
+    <Property Name="FileNo" Type="bigint" />
+  </EntityType>
+  <EntityType Name="KonsimentoInPackingList">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KosimentoId" Type="bigint" Nullable="false" />
+    <Property Name="PackingListId" Type="bigint" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="LanguageRefTable">
+    <Key>
+      <PropertyRef Name="EscmRefId" />
+    </Key>
+    <Property Name="TableName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EscmRefId" Type="bigint" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LanguageTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="EscmRefId" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="LanguageId" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="TransType" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TableRecId" Type="bigint" Nullable="false" />
+    <Property Name="RecId" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Moduls">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ModulName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ModulTransactionLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransactionId" Type="bigint" Nullable="false" />
+    <Property Name="ModulId" Type="int" Nullable="false" />
+    <Property Name="ProcessCode" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EventStartDate" Type="date" Nullable="false" />
+    <Property Name="EventEndDate" Type="date" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PackageBarcode">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PackageBarcodeId" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="BoxFamilyId" Type="int" Nullable="false" />
+    <Property Name="WorkOrderId" Type="int" Nullable="false" />
+    <Property Name="PackageBarcodeStatus" Type="bit" />
+    <Property Name="GroupPackageBarcode" Type="nvarchar" MaxLength="255" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="BrandId" Type="nvarchar" MaxLength="15" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="3" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="EntryUserId" Type="bigint" />
+    <Property Name="EntryStatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="PackageHeader">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BoxFamilyId" Type="bigint" Nullable="false" />
+    <Property Name="PONo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="InvoiceId" Type="bigint" Nullable="false" />
+    <Property Name="BoxTypeId" Type="int" Nullable="false" />
+    <Property Name="InGroupPackage" Type="int" Nullable="false" />
+    <Property Name="InPackingList" Type="bit" Nullable="false" />
+    <Property Name="PLId" Type="bigint" Nullable="false" />
+    <Property Name="NumberOfPackageQty" Type="int" Nullable="false" />
+    <Property Name="UnitBoxTotalGrossWeight" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="IsMixPackage" Type="bit" />
+    <Property Name="ProcessCode" Type="int" Nullable="false" />
+    <Property Name="BrandId" Type="nvarchar" MaxLength="15" />
+    <Property Name="PlOrderStart" Type="int" />
+    <Property Name="PlOrderEnd" Type="int" />
+    <Property Name="ForwarderQty" Type="int" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="PackageLine">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PoLineId" Type="bigint" Nullable="false" />
+    <Property Name="PackageHeaderId" Type="bigint" Nullable="false" />
+    <Property Name="QtyInPackage" Type="int" Nullable="false" />
+    <Property Name="AssortmentQty" Type="int" Nullable="false" />
+    <Property Name="InventSizeId" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="NetWeight" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="AssormentGroupId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="BrandId" Type="nvarchar" MaxLength="15" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="PackingListHeader">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PLNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="RefPLId" Type="bigint" />
+    <Property Name="PLStatus" Type="tinyint" Nullable="false" />
+    <Property Name="InventSeasonId" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="VendAccount" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="TotalNetWeight" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="TotalGrossWeight" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="TotalPackageQty" Type="int" Nullable="false" />
+    <Property Name="TotalVolume" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="WaitApproveDate" Type="datetime" Nullable="false" />
+    <Property Name="IsInvoiced" Type="bit" Nullable="false" />
+    <Property Name="InvoiceId" Type="bigint" Nullable="false" />
+    <Property Name="ApproveDate" Type="datetime" Nullable="false" />
+    <Property Name="ForwarderEntryDate" Type="datetime" Nullable="false" />
+    <Property Name="ForwarderCheckDate" Type="datetime" Nullable="false" />
+    <Property Name="ForwarderRevizionDate" Type="datetime" Nullable="false" />
+    <Property Name="LogisticApproveDate" Type="datetime" Nullable="false" />
+    <Property Name="PlannedDepartureDate" Type="datetime" Nullable="false" />
+    <Property Name="RealizedDepartureDate" Type="datetime" Nullable="false" />
+    <Property Name="PlannedArrivalDate" Type="datetime" Nullable="false" />
+    <Property Name="RealizedArrivalDate" Type="datetime" Nullable="false" />
+    <Property Name="LclFcl" Type="nvarchar" MaxLength="50" />
+    <Property Name="InPlanning" Type="nvarchar" MaxLength="50" />
+    <Property Name="DecisionDate" Type="datetime" Nullable="false" />
+    <Property Name="DeliveryNoticeDate" Type="datetime" Nullable="false" />
+    <Property Name="FinalToleranceDate" Type="datetime" Nullable="false" />
+    <Property Name="PenaltyDebitNote" Type="nvarchar" MaxLength="250" />
+    <Property Name="PenaltyNote" Type="nvarchar" MaxLength="250" />
+    <Property Name="IsSignedPaperTaken" Type="bit" Nullable="false" />
+    <Property Name="DepodEntryDate" Type="datetime" Nullable="false" />
+    <Property Name="SignedPaperDescription" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="ForwarderCheckDateHistory" Type="datetime" Nullable="false" />
+    <Property Name="VendorIncoterm" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="VendorForwarderId" Type="bigint" Nullable="false" />
+    <Property Name="VendorPortOfLoadingId" Type="bigint" />
+    <Property Name="EstHandoverDate" Type="datetime" Nullable="false" />
+    <Property Name="DeliveryType" Type="int" Nullable="false" />
+    <Property Name="PLSequenceNo" Type="int" Nullable="false" />
+    <Property Name="ShipToRoute" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="BillToRoute" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="DestinationGroupId" Type="nvarchar" MaxLength="50" />
+    <Property Name="PaymentTermId" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShipTo" Type="nvarchar" MaxLength="50" />
+    <Property Name="BillTo" Type="nvarchar" MaxLength="50" />
+    <Property Name="AgentAccountNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="AgentComission" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="IsSamplePo" Type="bit" />
+    <Property Name="VendorId" Type="nvarchar" MaxLength="50" />
+    <Property Name="InvoiceRuleId" Type="nvarchar" MaxLength="50" />
+    <Property Name="LcNo" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="DeliveryTypeApproved" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="PortOfDischargeId" Type="int" Nullable="false" />
+    <Property Name="FinalDestination" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="BrandId" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CurrencyCode" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="IsGPL" Type="bit" Nullable="false" />
+    <Property Name="Info" Type="nvarchar(max)" />
+    <Property Name="ControlDate" Type="datetime" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="2" />
+    <Property Name="CountryCode" Type="nchar" MaxLength="3" Nullable="false" />
+    <Property Name="ProductCount" Type="int" Nullable="false" />
+    <Property Name="PONo" Type="nvarchar" MaxLength="50" />
+    <Property Name="ItemId" Type="nvarchar" MaxLength="20" />
+    <Property Name="LCBankName" Type="nvarchar(max)" />
+    <Property Name="InventColorId" Type="nvarchar" MaxLength="25" />
+    <Property Name="IsCreatedAN" Type="bit" Nullable="false" />
+    <Property Name="DirectStatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="PackingListLine">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PackingListHeaderId" Type="bigint" Nullable="false" />
+    <Property Name="PackageId" Type="bigint" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="BrandId" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="Pattern">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PatternId" Type="nvarchar" MaxLength="15" />
+    <Property Name="PatternName" Type="nvarchar" MaxLength="60" />
+    <Property Name="BusinessGroup" Type="nvarchar" MaxLength="10" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="2" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="2" />
+    <Property Name="Stat" Type="bit" />
+    <Property Name="RecId" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PaymTerm">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PaymTermId" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="RecId" Type="bigint" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PenaltyByDeliveryDate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Group" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DeliveryMode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MinDay" Type="int" Nullable="false" />
+    <Property Name="MaxDay" Type="int" Nullable="false" />
+    <Property Name="DiscountRate" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PenaltyByQuantity">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Group" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MinRate" Type="decimal" Precision="18" Scale="10" Nullable="false" />
+    <Property Name="MaxRate" Type="decimal" Precision="18" Scale="10" Nullable="false" />
+    <Property Name="DiscountRate" Type="decimal" Precision="18" Scale="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ports">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PortCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PortName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CountryCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="CountryName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="BookingDisplay" Type="bit" Nullable="false" />
+    <Property Name="TransitDisplay" Type="bit" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="TransType" Type="nchar" MaxLength="1" Nullable="false" />
+    <Property Name="IsPortOfDischarge" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Price">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ItemId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="InventDimId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Accountrelation" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FromDate" Type="date" Nullable="false" />
+    <Property Name="ToDate" Type="date" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Currency" Type="nvarchar" MaxLength="4" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="RecId" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="InventColorId" Type="nvarchar" MaxLength="20" />
+    <Property Name="InventStyleId" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ProcessType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ModulId" Type="int" Nullable="false" />
+    <Property Name="Code" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="InventSeasonId" />
+      <PropertyRef Name="ItemId" />
+      <PropertyRef Name="InventColorId" />
+      <PropertyRef Name="InventStyleId" />
+      <PropertyRef Name="BrandId" />
+      <PropertyRef Name="AppId" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InventSeasonId" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="ItemId" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="InventColorId" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="InventStyleId" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ThemeId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FabricCompositionId" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="PatternId" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="ArticleCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="BrandId" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="BusinessGroup" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="DivisionGroup" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="RetailGroup" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="RecId" Type="bigint" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="IsCoated" Type="int" Nullable="false" />
+    <Property Name="CLSApproveFabricComposition" Type="bit" />
+  </EntityType>
+  <EntityType Name="PurchaseOrderHeader">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PONo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="VendAccount" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="InvoiceAccount" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="AgentId" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="AgentComission" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PurchName" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="BrandId" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="POStatus" Type="int" Nullable="false" />
+    <Property Name="InventSeasonId" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="ItemId" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="CountryOfOrigin" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="FSHDivisionGroupId" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="RBORetailGroupId" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="FSHBusinessGroupId" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="CurrencyCode" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="CountryOfOriginOth" Type="nvarchar" MaxLength="25" />
+    <Property Name="Mt" Type="nvarchar" MaxLength="60" />
+    <Property Name="Merch" Type="nvarchar" MaxLength="60" />
+    <Property Name="IsFreeOfCharge" Type="int" Nullable="false" />
+    <Property Name="RecId" Type="bigint" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="POOpen" Type="int" Nullable="false" />
+    <Property Name="BillTo" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="SubName" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="SubAccountNum" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="BillToRouteId" Type="nvarchar" MaxLength="10" />
+    <Property Name="Technician" Type="nvarchar" MaxLength="100" />
+    <Property Name="IsSamplePo" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Closed" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PurchaseOrderLine">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PONo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ThemeId" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="ItemId" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="InventColorId" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="InventStyleId" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="InventSizeId" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="InventSeasonId" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="PurchPoolId" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="DeliveryDate" Type="datetime" Nullable="false" />
+    <Property Name="ModelNum" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="IsSizePO" Type="int" Nullable="false" />
+    <Property Name="AssortmentGroupId" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="PurchQtyOrdered" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="LineNum" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="POStatus" Type="int" Nullable="false" />
+    <Property Name="DeliveryMode" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="FabricCompositionId" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="LotQty" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="QtyInAssortment" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MinDeliveryTolDays" Type="int" Nullable="false" />
+    <Property Name="DeliveryDateRev" Type="datetime" Nullable="false" />
+    <Property Name="LabelDesignType" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="ClsWeight" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ShipTo" Type="nvarchar" MaxLength="25" />
+    <Property Name="LCNo" Type="nvarchar" MaxLength="60" />
+    <Property Name="PaymentTermId" Type="nvarchar" MaxLength="25" />
+    <Property Name="PurchPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="RecId" Type="bigint" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="LCBankName" Type="nvarchar(max)" />
+    <Property Name="ShipToRouteId" Type="nvarchar" MaxLength="10" />
+    <Property Name="LCBankGroupId" Type="nvarchar" MaxLength="25" />
+    <Property Name="LCPaymTermName" Type="nvarchar(max)" />
+    <Property Name="LCPaymTermId" Type="nvarchar" MaxLength="25" />
+    <Property Name="InBoundPacking" Type="nvarchar" MaxLength="5" />
+    <Property Name="Incoterm" Type="nvarchar" MaxLength="50" />
+    <Property Name="Closed" Type="bit" Nullable="false" />
+    <Property Name="IsManualUpdate" Type="bit" Nullable="false" />
+    <Property Name="SendUpdateDate" Type="datetime" />
+    <Property Name="StoreInDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SalesPool">
+    <Key>
+      <PropertyRef Name="RecId" />
+      <PropertyRef Name="AppId" />
+    </Key>
+    <Property Name="RecId" Type="bigint" Nullable="false" />
+    <Property Name="SalesPoolId" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="ExportTransit" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Country" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="DestinationGroupId" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="DestinationGroupIdOld" Type="nvarchar" MaxLength="25" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="DestinationGroupName" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Seasons">
+    <Key>
+      <PropertyRef Name="InventSeasonId" />
+      <PropertyRef Name="AppId" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InventSeasonId" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="RecId" Type="bigint" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="StartDate" Type="date" />
+    <Property Name="FinishDate" Type="date" />
+    <Property Name="InUse" Type="bit" />
+    <Property Name="SalesSeason" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ShipToRoute">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ShipToRouteId" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="SequenceNo" Type="int" Nullable="false" />
+    <Property Name="ShipToAccount" Type="nvarchar" MaxLength="150" />
+    <Property Name="InventLocation" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="ClsQuality" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="PortOfDischargeId" Type="int" />
+    <Property Name="FinalDestination" Type="nvarchar" MaxLength="250" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="BrandId" Type="nvarchar" MaxLength="3" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="Storage" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sizes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InventSizeId" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="RecId" Type="bigint" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SizesOrdered">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="SIZE_" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="DESCRIPTION" Type="ntext" />
+    <Property Name="RECID" Type="bigint" Nullable="false" />
+    <Property Name="CLS_ROW" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="CLS_COLUMN" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="CLS_SIZETYPE" Type="int" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="OrderNum" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedUserId" Type="int" />
+  </EntityType>
+  <EntityType Name="SizeWeight">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SeasonId" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="ItemId" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="InventStyle" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="InventColor" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="InventSizeId" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="NetWeight" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="VendAccount" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="BrandId" Type="nvarchar" MaxLength="15" />
+    <Property Name="SubVendAccountNum" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SubVendAccount">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VendAccount" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SubVendAccount" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="RecId" Type="bigint" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Theme">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="ThemeId" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="ThemeName" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="RecId" Type="bigint" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VenderBank">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="bigint" Nullable="false" />
+    <Property Name="BankName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="BankAddress" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="BankAccountNumber" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SwiftCode" Type="nvarchar" MaxLength="75" Nullable="false" />
+    <Property Name="IBAN" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="AppId" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="DefaultBank" Type="bit" Nullable="false" />
+    <Property Name="BanksStatus" Type="bit" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ESCMTest.front.Vessel' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Vessel">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="ImoNo" />
+      <PropertyRef Name="VesselName" />
+      <PropertyRef Name="ProduceDate" />
+      <PropertyRef Name="Flag" />
+      <PropertyRef Name="GrossTonnage" />
+      <PropertyRef Name="Classification" />
+      <PropertyRef Name="TransType" />
+      <PropertyRef Name="Stat" />
+      <PropertyRef Name="CreatedDate" />
+      <PropertyRef Name="ModifiedDate" />
+      <PropertyRef Name="ModifiedUserId" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ImoNo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="VesselName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ProduceDate" Type="int" Nullable="false" />
+    <Property Name="Flag" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="GrossTonnage" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Classification" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WogiTransfer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WorkOrderGroupId" Type="bigint" />
+    <Property Name="BeyannameNo" Type="nvarchar" MaxLength="250" />
+    <Property Name="ColorId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Gtip" Type="nvarchar" MaxLength="150" />
+    <Property Name="ImportFileNo" Type="bigint" />
+    <Property Name="ItemId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="KalemNo" Type="bigint" />
+    <Property Name="PlNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="QualityVersiyonId" Type="nvarchar" MaxLength="50" />
+    <Property Name="SeasonId" Type="nvarchar" MaxLength="25" />
+    <Property Name="SecondaryItemType" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="TransferType" Type="int" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WorkOrder">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomWorkOrderId" Type="bigint" />
+    <Property Name="WorkOrderGroupId" Type="bigint" />
+    <Property Name="WorkOrderGuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="WorkOrderStatusId" Type="int" Nullable="false" />
+    <Property Name="WorkOrderTransferZoneId" Type="int" Nullable="false" />
+    <Property Name="WorkOrderTypeId" Type="int" />
+    <Property Name="Note" Type="varchar" MaxLength="500" />
+    <Property Name="InsertTime" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="ProblemDescription" Type="nvarchar" MaxLength="1000" />
+    <Property Name="FileNo" Type="bigint" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="EquipmentNo" Type="nvarchar" MaxLength="1000" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WorkOrderCustomsCompany">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompanyName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WorkOrderDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WorkOrderDetailGuid" Type="uniqueidentifier" />
+    <Property Name="WorkOrderId" Type="bigint" Nullable="false" />
+    <Property Name="WorkOrderGroupId" Type="bigint" />
+    <Property Name="InvoiceNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PackingListId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ModelNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="InventStyleId" Type="nvarchar" MaxLength="50" />
+    <Property Name="ArticleCode" Type="nvarchar" MaxLength="20" />
+    <Property Name="DestinationId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ColorId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TotalGrossWeight" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="TotalNetWeight" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="BoxQty" Type="int" Nullable="false" />
+    <Property Name="ProductQty" Type="int" Nullable="false" />
+    <Property Name="WorkOrderInvoiceAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="WorkOrderDetailAffairsId" Type="bigint" />
+    <Property Name="rec_id" Type="uniqueidentifier" />
+    <Property Name="GTIP" Type="nvarchar" MaxLength="150" />
+    <Property Name="AsnLineId" Type="bigint" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="EquipmentNo" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="WorkOrderDetailAffairs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WorkOrderAffairsGuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="WorkOrderId" Type="bigint" />
+    <Property Name="WorkOrderGuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DescriptionOfGoods" Type="nvarchar" MaxLength="250" />
+    <Property Name="PLNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="ItemCode" Type="nvarchar" MaxLength="40" />
+    <Property Name="InventStyleId" Type="nvarchar" MaxLength="50" />
+    <Property Name="ArticleCode" Type="nvarchar" MaxLength="20" />
+    <Property Name="Uom" Type="nvarchar" MaxLength="3" />
+    <Property Name="ActualQuantity" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="InvoiceQuantity" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CountryOfOrigian" Type="nvarchar" MaxLength="40" />
+    <Property Name="GrossWeight" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="NetWeight" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="IncotermCode" Type="nvarchar" MaxLength="25" />
+    <Property Name="InvoiceNo" Type="nvarchar" MaxLength="240" />
+    <Property Name="InvoiceDate" Type="smalldatetime" />
+    <Property Name="InvoiceAmount" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="PackageType" Type="nvarchar" MaxLength="240" />
+    <Property Name="NumberOfPackageQty" Type="int" />
+    <Property Name="Color" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProductGroup" Type="nvarchar" MaxLength="100" />
+    <Property Name="Fabric" Type="nvarchar" MaxLength="150" />
+    <Property Name="KonsimentoNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="PaymTerm" Type="nvarchar" MaxLength="50" />
+    <Property Name="CommercialDefinition" Type="nvarchar" MaxLength="240" />
+    <Property Name="CommisionInvoiceAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CommisionCurrencyType" Type="nvarchar" MaxLength="15" />
+    <Property Name="rec_id" Type="uniqueidentifier" />
+    <Property Name="ModifiedUserId" Type="bigint" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="GTIP" Type="nvarchar" MaxLength="150" />
+    <Property Name="AsnLineId" Type="bigint" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="10" />
+    <Property Name="Beneficiary" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="WorkOrderFile">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WorkOrderId" Type="bigint" Nullable="false" />
+    <Property Name="FileName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WorkOrderGroup">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WorkOrderGroupGuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="WogiName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsSend" Type="bit" Nullable="false" />
+    <Property Name="WorkOrderTypeId" Type="int" Nullable="false" />
+    <Property Name="DeclarationRegistrationNo" Type="nvarchar" MaxLength="250" />
+    <Property Name="DeclarationRegistrationDate" Type="datetime" />
+    <Property Name="GDMessage" Type="nvarchar(max)" />
+    <Property Name="ResponseStatus" Type="nvarchar" MaxLength="4" />
+    <Property Name="Stat" Type="bit" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedUserId" Type="bigint" Nullable="false" />
+    <Property Name="TransType" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="IsCreatedAN" Type="bit" />
+    <Property Name="ANWogiNo" Type="bigint" />
+    <Property Name="CustomsCompanyId" Type="int" />
+    <Property Name="TaxPaymentDate" Type="date" />
+    <Property Name="DischargeRecordDate" Type="date" />
+  </EntityType>
+  <EntityType Name="WorkOrderStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WorkOrderStatusHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WorkOrderId" Type="int" Nullable="false" />
+    <Property Name="WorkOrderStatusId" Type="int" />
+    <Property Name="InsertTime" Type="datetime" Nullable="false" />
+    <Property Name="WorkOrderStatus" Type="nvarchar" MaxLength="500" />
+    <Property Name="WorkOrderSubstatus" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="WorkOrderTransferZone">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WorkOrderType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nchar" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="WorkOrderTypeTransferZone">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WorkOrderTypeId" Type="int" />
+    <Property Name="WorkOrderTransferZoneId" Type="int" />
+  </EntityType>
+  <EntityContainer Name="ESCMTestModelStoreContainer">
+    <EntitySet Name="Accounts" EntityType="Self.Accounts" Schema="front" store:Type="Tables" />
+    <EntitySet Name="ApprovalMask" EntityType="Self.ApprovalMask" Schema="front" store:Type="Tables" />
+    <EntitySet Name="ApprovalMaskDeleted" EntityType="Self.ApprovalMaskDeleted" Schema="front" store:Type="Tables" />
+    <EntitySet Name="AssortmentTable" EntityType="Self.AssortmentTable" Schema="front" store:Type="Tables" />
+    <EntitySet Name="Barcode" EntityType="Self.Barcode" Schema="front" store:Type="Tables" />
+    <EntitySet Name="BillToRoute" EntityType="Self.BillToRoute" Schema="front" store:Type="Tables" />
+    <EntitySet Name="BillToShipToMapping" EntityType="Self.BillToShipToMapping" Schema="front" store:Type="Tables" />
+    <EntitySet Name="BookingHeader" EntityType="Self.BookingHeader" Schema="front" store:Type="Tables" />
+    <EntitySet Name="BookingLine" EntityType="Self.BookingLine" Schema="front" store:Type="Tables" />
+    <EntitySet Name="BoxType" EntityType="Self.BoxType" Schema="front" store:Type="Tables" />
+    <EntitySet Name="BusinessGroup" EntityType="Self.BusinessGroup" Schema="front" store:Type="Tables" />
+    <EntitySet Name="Colors" EntityType="Self.Colors" Schema="front" store:Type="Tables" />
+    <EntitySet Name="CompareTable" EntityType="Self.CompareTable" Schema="front" store:Type="Tables" />
+    <EntitySet Name="Country" EntityType="Self.Country" Schema="front" store:Type="Tables" />
+    <EntitySet Name="CountryTransport" EntityType="Self.CountryTransport" Schema="front" store:Type="Tables" />
+    <EntitySet Name="DeliveryMode" EntityType="Self.DeliveryMode" Schema="front" store:Type="Tables" />
+    <EntitySet Name="Design" EntityType="Self.Design" Schema="front" store:Type="Tables" />
+    <EntitySet Name="DesignField" EntityType="Self.DesignField" Schema="front" store:Type="Tables" />
+    <EntitySet Name="DesignLabel" EntityType="Self.DesignLabel" Schema="front" store:Type="Tables" />
+    <EntitySet Name="DesignType" EntityType="Self.DesignType" Schema="front" store:Type="Tables" />
+    <EntitySet Name="DivisionGroup" EntityType="Self.DivisionGroup" Schema="front" store:Type="Tables" />
+    <EntitySet Name="Equipment" EntityType="Self.Equipment" Schema="front" store:Type="Tables" />
+    <EntitySet Name="EquipmentInEvent" EntityType="Self.EquipmentInEvent" Schema="front" store:Type="Tables" />
+    <EntitySet Name="EquipmentInPackingList" EntityType="Self.EquipmentInPackingList" Schema="front" store:Type="Tables" />
+    <EntitySet Name="EquipmentRoute" EntityType="Self.EquipmentRoute" Schema="front" store:Type="Tables" />
+    <EntitySet Name="FabricComposition" EntityType="Self.FabricComposition" Schema="front" store:Type="Tables" />
+    <EntitySet Name="Forwarder" EntityType="Self.Forwarder" Schema="front" store:Type="Tables" />
+    <EntitySet Name="ForwarderOffice" EntityType="Self.ForwarderOffice" Schema="front" store:Type="Tables" />
+    <EntitySet Name="Insurance" EntityType="Self.Insurance" Schema="front" store:Type="Tables" />
+    <EntitySet Name="InsuranceDelivery" EntityType="Self.InsuranceDelivery" Schema="front" store:Type="Tables" />
+    <EntitySet Name="InsuranceFiles" EntityType="Self.InsuranceFiles" Schema="front" store:Type="Tables" />
+    <EntitySet Name="InsuranceInKonsimento" EntityType="Self.InsuranceInKonsimento" Schema="front" store:Type="Tables" />
+    <EntitySet Name="Insurer" EntityType="Self.Insurer" Schema="front" store:Type="Tables" />
+    <EntitySet Name="InventDim" EntityType="Self.InventDim" Schema="front" store:Type="Tables" />
+    <EntitySet Name="InventDimCombination" EntityType="Self.InventDimCombination" Schema="front" store:Type="Tables" />
+    <EntitySet Name="InventItemGroup" EntityType="Self.InventItemGroup" Schema="front" store:Type="Tables" />
+    <EntitySet Name="InventItemRetailGroup" EntityType="Self.InventItemRetailGroup" Schema="front" store:Type="Tables" />
+    <EntitySet Name="InvoiceHeader" EntityType="Self.InvoiceHeader" Schema="front" store:Type="Tables" />
+    <EntitySet Name="InvoiceLine" EntityType="Self.InvoiceLine" Schema="front" store:Type="Tables" />
+    <EntitySet Name="Konsimento" EntityType="Self.Konsimento" Schema="front" store:Type="Tables" />
+    <EntitySet Name="KonsimentoInPackingList" EntityType="Self.KonsimentoInPackingList" Schema="front" store:Type="Tables" />
+    <EntitySet Name="LanguageRefTable" EntityType="Self.LanguageRefTable" Schema="front" store:Type="Tables" />
+    <EntitySet Name="LanguageTable" EntityType="Self.LanguageTable" Schema="front" store:Type="Tables" />
+    <EntitySet Name="Moduls" EntityType="Self.Moduls" Schema="front" store:Type="Tables" />
+    <EntitySet Name="ModulTransactionLog" EntityType="Self.ModulTransactionLog" Schema="front" store:Type="Tables" />
+    <EntitySet Name="PackageBarcode" EntityType="Self.PackageBarcode" Schema="front" store:Type="Tables" />
+    <EntitySet Name="PackageHeader" EntityType="Self.PackageHeader" Schema="front" store:Type="Tables" />
+    <EntitySet Name="PackageLine" EntityType="Self.PackageLine" Schema="front" store:Type="Tables" />
+    <EntitySet Name="PackingListHeader" EntityType="Self.PackingListHeader" Schema="front" store:Type="Tables" />
+    <EntitySet Name="PackingListLine" EntityType="Self.PackingListLine" Schema="front" store:Type="Tables" />
+    <EntitySet Name="Pattern" EntityType="Self.Pattern" Schema="front" store:Type="Tables" />
+    <EntitySet Name="PaymTerm" EntityType="Self.PaymTerm" Schema="front" store:Type="Tables" />
+    <EntitySet Name="PenaltyByDeliveryDate" EntityType="Self.PenaltyByDeliveryDate" Schema="front" store:Type="Tables" />
+    <EntitySet Name="PenaltyByQuantity" EntityType="Self.PenaltyByQuantity" Schema="front" store:Type="Tables" />
+    <EntitySet Name="Ports" EntityType="Self.Ports" Schema="front" store:Type="Tables" />
+    <EntitySet Name="Price" EntityType="Self.Price" Schema="front" store:Type="Tables" />
+    <EntitySet Name="ProcessType" EntityType="Self.ProcessType" Schema="front" store:Type="Tables" />
+    <EntitySet Name="Products" EntityType="Self.Products" Schema="front" store:Type="Tables" />
+    <EntitySet Name="PurchaseOrderHeader" EntityType="Self.PurchaseOrderHeader" Schema="front" store:Type="Tables" />
+    <EntitySet Name="PurchaseOrderLine" EntityType="Self.PurchaseOrderLine" Schema="front" store:Type="Tables" />
+    <EntitySet Name="SalesPool" EntityType="Self.SalesPool" Schema="front" store:Type="Tables" />
+    <EntitySet Name="Seasons" EntityType="Self.Seasons" Schema="front" store:Type="Tables" />
+    <EntitySet Name="ShipToRoute" EntityType="Self.ShipToRoute" Schema="front" store:Type="Tables" />
+    <EntitySet Name="Sizes" EntityType="Self.Sizes" Schema="front" store:Type="Tables" />
+    <EntitySet Name="SizesOrdered" EntityType="Self.SizesOrdered" Schema="front" store:Type="Tables" />
+    <EntitySet Name="SizeWeight" EntityType="Self.SizeWeight" Schema="front" store:Type="Tables" />
+    <EntitySet Name="SubVendAccount" EntityType="Self.SubVendAccount" Schema="front" store:Type="Tables" />
+    <EntitySet Name="Theme" EntityType="Self.Theme" Schema="front" store:Type="Tables" />
+    <EntitySet Name="VenderBank" EntityType="Self.VenderBank" Schema="front" store:Type="Tables" />
+    <EntitySet Name="WogiTransfer" EntityType="Self.WogiTransfer" Schema="front" store:Type="Tables" />
+    <EntitySet Name="WorkOrder" EntityType="Self.WorkOrder" Schema="front" store:Type="Tables" />
+    <EntitySet Name="WorkOrderCustomsCompany" EntityType="Self.WorkOrderCustomsCompany" Schema="front" store:Type="Tables" />
+    <EntitySet Name="WorkOrderDetail" EntityType="Self.WorkOrderDetail" Schema="front" store:Type="Tables" />
+    <EntitySet Name="WorkOrderDetailAffairs" EntityType="Self.WorkOrderDetailAffairs" Schema="front" store:Type="Tables" />
+    <EntitySet Name="WorkOrderFile" EntityType="Self.WorkOrderFile" Schema="front" store:Type="Tables" />
+    <EntitySet Name="WorkOrderGroup" EntityType="Self.WorkOrderGroup" Schema="front" store:Type="Tables" />
+    <EntitySet Name="WorkOrderStatus" EntityType="Self.WorkOrderStatus" Schema="front" store:Type="Tables" />
+    <EntitySet Name="WorkOrderStatusHistory" EntityType="Self.WorkOrderStatusHistory" Schema="front" store:Type="Tables" />
+    <EntitySet Name="WorkOrderTransferZone" EntityType="Self.WorkOrderTransferZone" Schema="front" store:Type="Tables" />
+    <EntitySet Name="WorkOrderType" EntityType="Self.WorkOrderType" Schema="front" store:Type="Tables" />
+    <EntitySet Name="WorkOrderTypeTransferZone" EntityType="Self.WorkOrderTypeTransferZone" Schema="front" store:Type="Tables" />
+    <EntitySet Name="Incoterm" EntityType="Self.Incoterm" store:Type="Tables" store:Schema="front">
+      <DefiningQuery>SELECT 
+    [Incoterm].[Id] AS [Id], 
+    [Incoterm].[IncotermType] AS [IncotermType], 
+    [Incoterm].[Stat] AS [Stat], 
+    [Incoterm].[AppId] AS [AppId], 
+    [Incoterm].[ModifiedDate] AS [ModifiedDate], 
+    [Incoterm].[ModifiedUserId] AS [ModifiedUserId], 
+    [Incoterm].[CreatedDate] AS [CreatedDate]
+    FROM [front].[Incoterm] AS [Incoterm]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Vessel" EntityType="Self.Vessel" store:Type="Tables" store:Schema="front">
+      <DefiningQuery>SELECT 
+    [Vessel].[Id] AS [Id], 
+    [Vessel].[ImoNo] AS [ImoNo], 
+    [Vessel].[VesselName] AS [VesselName], 
+    [Vessel].[ProduceDate] AS [ProduceDate], 
+    [Vessel].[Flag] AS [Flag], 
+    [Vessel].[GrossTonnage] AS [GrossTonnage], 
+    [Vessel].[Classification] AS [Classification], 
+    [Vessel].[TransType] AS [TransType], 
+    [Vessel].[Stat] AS [Stat], 
+    [Vessel].[CreatedDate] AS [CreatedDate], 
+    [Vessel].[ModifiedDate] AS [ModifiedDate], 
+    [Vessel].[ModifiedUserId] AS [ModifiedUserId]
+    FROM [front].[Vessel] AS [Vessel]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
